@@ -13,10 +13,14 @@
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     color: #1E232E;
     background-color: #FFFFFF;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   body {
     overflow-x: hidden;
+    max-width: 100%;
+    position: relative;
   }
 
   h1, h2, h3, h4, .font-serif-heading {
