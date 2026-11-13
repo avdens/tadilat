@@ -313,12 +313,12 @@ import { siteConfig } from "../data/siteConfig";
     // Update WhatsApp link
     if (calcWaBtn) {
       const waText = encodeURIComponent(
-        `Merhaba Artı Mimarlık, sitedeki Fiyat Hesaplayıcı ile bir hesaplama yaptım:\n` +
+        `Merhaba HS Dekorasyon, sitedeki Fiyat Hesaplayıcı ile Konya için bir hesaplama yaptım:\n` +
         `🏠 Mekan Türü: ${currentTypeName}\n` +
         `📐 Alan: ${currentArea} m²\n` +
         `⭐ Paket: ${currentTierName}\n` +
         `💰 Tahmini Bütçe: ${formatNumber(minPrice)} - ${formatNumber(maxPrice)} TL\n` +
-        `Bu hesaplama için ücretsiz yerinde keşif randevusu almak istiyorum.`
+        `Bu hesaplama için Konya'da yerinde ücretsiz keşif randevusu almak istiyorum.`
       );
       calcWaBtn.href = `https://wa.me/${whatsappRaw}?text=${waText}`;
     }

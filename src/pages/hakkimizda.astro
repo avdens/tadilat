@@ -7,45 +7,45 @@ import { siteConfig } from "../data/siteConfig";
 
 const teamMembers = [
   {
-    name: "Emre Yılmaz",
-    role: "Kurucu & Baş Mimar (İTÜ Mimarlık)",
-    exp: "18 Yıl Deneyim",
+    name: "Hasan Usta",
+    role: "Kurucu & Baş Usta",
+    exp: "20 Yıl Usta Tecrübesi",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
-    bio: "İTÜ Mimarlık mezunu. 18 yıllık şantiye ve lüks konut renovasyonu deneyimiyle projelerin tüm statik ve estetik sürecini bizzat yönetir."
+    bio: "Çekirdekten yetişme 20 yıllık şantiye ve tadilat tecrübesiyle Konya'daki tüm kırım, tesisat, planlama ve anahtar teslim aşamalarını bizzat yönetir."
   },
   {
-    name: "Zeynep Arslan",
-    role: "İç Mimari Ekip Lideri (MSGSÜ)",
-    exp: "11 Yıl Deneyim",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
-    bio: "Mimar Sinan mezunu. Fonksiyonel mekan çözümleri, malzeme moodboard'ları ve foto-gerçekçi 3D modelleme alanında uzman."
-  },
-  {
-    name: "Hakan Demir",
-    role: "Baş İnşaat Mühendisi & Şantiye Direktörü",
-    exp: "15 Yıl Deneyim",
+    name: "Mehmet Usta",
+    role: "Fayans & Seramik Ustası",
+    exp: "16 Yıl Usta Tecrübesi",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
-    bio: "Tüm sıhhi, mekanik, elektrik altyapı testlerini ve şantiye takviminin milimetrik olarak gününde teslim edilmesini sağlar."
+    bio: "Banyo, mutfak ve zemin seramiklerinde lazer teraziyle milimetrik döşeme, çift kat su sürme yalıtımı ve sıfır hata işçilik uzmanı."
+  },
+  {
+    name: "Ali Usta",
+    role: "Alçı, Boya & Asma Tavan Ustası",
+    exp: "18 Yıl Usta Tecrübesi",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80",
+    bio: "Pürüzsüz saten alçı, Jotun ve silinebilir boya uygulamaları ile gizli LED ışıklı asma tavan ve niş tasarımlarında usta işçilik sunar."
   }
 ];
 
 const brandPartners = [
-  "Jotun Boya", "VitrA", "Grohe", "Rehau", "Geberit", "Schneider Electric", "Blum", "Çimstone", "Knauf", "Egger Parke"
+  "Jotun Boya", "VitrA", "Fırat Boru", "Kütahya Porselen", "Geberit", "Schneider Electric", "Blum", "Çamsan Parke", "Knauf Alçıpan", "Weber"
 ];
 ---
 
 <Layout 
-  title={`Kurumsal & Hakkımızda | ${siteConfig.brandName}`}
-  description="18 yıllık köklü deneyim, uzman mimari ve mühendis kadromuzla İstanbul'da anahtar teslim ev, ofis ve bina tadilatında güvenin adresi."
+  title={`Hakkımızda & Usta Ekibimiz | ${siteConfig.brandName}`}
+  description="Konya'da 20 yıllık usta tecrübesi ve çekirdekten yetişme ekibimizle anahtar teslim ev, ofis, daire ve villa tadilatında aracısız güvenilir işçilik."
 >
-  <Breadcrumb items={[{ label: "Kurumsal & Hakkımızda" }]} />
+  <Breadcrumb items={[{ label: "Hakkımızda & Usta Ekibimiz" }]} />
 
   <!-- Hero Banner -->
   <section class="relative bg-anthracite-950 text-white py-20 overflow-hidden">
     <div class="absolute inset-0 z-0 opacity-20">
       <img 
         src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80" 
-        alt="Kurumsal" 
+        alt="HS Dekorasyon Konya" 
         class="w-full h-full object-cover"
       />
     </div>
@@ -53,15 +53,15 @@ const brandPartners = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="max-w-3xl">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">
-          18 Yıllık Mimari Miras
+          20 Yıllık Usta Tecrübesi
         </span>
         <h1 class="text-3xl sm:text-5xl font-serif-heading font-extrabold text-white tracking-tight mb-4">
-          Tadilatı Stres Değil, <br />
-          <span class="gold-gradient-text">Keyifli Bir Dönüşüme</span> Çeviriyoruz.
+          Aracısız, Komisyonsuz <br />
+          <span class="gold-gradient-text">Doğrudan Ustasından</span> Tadilat.
         </h1>
         <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
-          {siteConfig.brandName}, klasik usta pazarlıklarının ve sürpriz maliyetlerin yarattığı güvensizliği ortadan kaldırmak için kuruldu. 
-          Tek elden, sözleşmeli sabit fiyat garantisiyle A'dan Z'ye anahtar teslim mimari çözümler sunuyoruz.
+          {siteConfig.brandName}, Konya'da tadilat yaptırmak isteyen ev sahiplerinin yaşadığı usta bulma derdini, taşeron karmaşasını ve sürpriz maliyetleri ortadan kaldırmak için kuruldu. 
+          Kırımından boyasına, tesisatından dolabına kadar tüm işi tek elden ve sözleşmeli sabit fiyat garantisiyle teslim ediyoruz.
         </p>
       </div>
     </div>
@@ -74,26 +74,26 @@ const brandPartners = [
         
         <div class="space-y-6">
           <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold uppercase tracking-wider">
-            Hikayemiz & Felsefemiz
+            Hikayemiz & Usta Disiplini
           </span>
           <h2 class="text-3xl font-serif-heading font-bold text-anthracite-950">
-            "Müşterimiz şantiyeyi değil, yeni hayatını hayal etmeli."
+            "Biz lafa değil, yaptığımız işin kalitesine bakarız."
           </h2>
           <p class="text-sm text-slate-600 leading-relaxed">
-            2007 yılında mimarlık ve inşaat mühendisliği disiplinini tek çatı altında birleştirerek yola çıktık. Bugüne kadar Kadıköy'den Sarıyer'e, Beşiktaş'tan Ataşehir'e kadar 450'den fazla daire, villa, genel müdürlük ofisi ve komple bina taahhüt projesini sıfır hata ve gününde teslim ettik.
+            Yıllardır Konya'da çıraklıktan ustalığa adım adım edindiğimiz saha deneyimiyle yüzlerce daire, müstakil ev, dükkan ve ofis yeniledik. Selçuklu, Meram, Karatay başta olmak üzere Konya'nın dört bir yanında 550'den fazla mekanı teslim ettik.
           </p>
           <p class="text-sm text-slate-600 leading-relaxed">
-            Bizim için tadilat yalnızca seramik değiştirmek ya da duvar boyamak değildir. Bir evin tesisatını sıfırlamak, güvenli elektrik hatları kurmak, ısı ve ses yalıtımını maksimize etmek ve nihayetinde o mekanda yaşayan insanların ruhuna huzur veren bir estetik inşa etmektir.
+            Bizim farkımız; araya komisyoncu veya taşeron sokmadan, bizzat işin başında duran usta ekibiyle çalışmanızdır. Su tesisatını sağlam çeker, seramiği teraziye alır, boyayı dalgasız atar ve günü gününe anahtarınızı teslim ederiz.
           </p>
 
           <div class="grid grid-cols-2 gap-4 pt-4">
             <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
-              <span class="text-2xl font-bold font-serif-heading text-gold-600 block mb-1">450+</span>
-              <span class="text-xs text-slate-600 font-medium">Teslim Edilen Proje</span>
+              <span class="text-2xl font-bold font-serif-heading text-gold-600 block mb-1">550+</span>
+              <span class="text-xs text-slate-600 font-medium">Tamamlanan Usta İşi</span>
             </div>
             <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
               <span class="text-2xl font-bold font-serif-heading text-gold-600 block mb-1">5 Yıl</span>
-              <span class="text-xs text-slate-600 font-medium">Resmi İşçilik Garantisi</span>
+              <span class="text-xs text-slate-600 font-medium">İşçilik Garantisi</span>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@ const brandPartners = [
           <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
             <img 
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" 
-              alt="Artı Mimarlık Ofisi" 
+              alt="HS Dekorasyon Konya Tadilat" 
               class="w-full h-full object-cover"
             />
           </div>
@@ -111,10 +111,10 @@ const brandPartners = [
               <div class="w-8 h-8 rounded-full bg-gold-500 text-anthracite-950 font-bold flex items-center justify-center text-xs">
                 ✓
               </div>
-              <span class="text-xs font-bold text-gold-400">Sabit Fiyat Güvencesi</span>
+              <span class="text-xs font-bold text-gold-400">Sabit Fiyat Sözleşmesi</span>
             </div>
             <p class="text-[11px] text-slate-300">
-              Keşif sonrası onaylanan bütçe dışında hiçbir ek kalem talep edilmez.
+              Keşif sonrası yazılı sözleşmeye yazılan fiyat sabittir; sonradan sürpriz ek masraf çıkarılmaz.
             </p>
           </div>
         </div>
@@ -131,13 +131,13 @@ const brandPartners = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold uppercase tracking-wider mb-3">
-          Uzman Kadromuz
+          İşinin Ehli Kadromuz
         </span>
         <h2 class="text-3xl font-serif-heading font-bold text-anthracite-950">
-          Projenizi Emanet Ettiğiniz Mimarlar ve Mühendisler
+          Evinizi Emanet Ettiğiniz Usta Ekibimiz
         </h2>
         <p class="text-sm text-slate-600 mt-2">
-          Her şantiyemiz belgeli iş güvenliği uzmanları, iç mimarlar ve şantiye şeflerimizin bizzat kontrolündedir.
+          Her işimizde usta başımız bizzat şantiyenin başında durur; tesisatından boyasına her aşama titizlikle kontrol edilir.
         </p>
       </div>
 
@@ -175,7 +175,7 @@ const brandPartners = [
   <section class="py-16 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <span class="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-6">
-        Projelerimizde Yalnızca 1. Sınıf Tescilli Markaları Kullanıyoruz
+        Projelerimizde Yalnızca 1. Sınıf Kaliteli ve Garantili Malzemeleri Kullanıyoruz
       </span>
       <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
         {brandPartners.map((brand) => (
@@ -189,4 +189,3 @@ const brandPartners = [
 
   <CTASection />
 </Layout>
-

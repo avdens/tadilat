@@ -25,7 +25,7 @@ export const services: ServiceItem[] = [
     badge: "En Çok Tercih Edilen",
     subtitle: "Anahtar teslim yaşam alanı dönüşümü",
     shortDescription: "Elektrik ve su tesisatından zemin kaplamalarına, asma tavandan özel mobilya üretimine kadar evinizi sıfırdan hayalinizdeki konfora kavuşturuyoruz.",
-    fullDescription: "Evinizi yenilemek yalnızca estetik bir dokunuş değil; yaşam kalitenizi, konforunuzu ve mülkünüzün değerini artıran stratejik bir yatırımdır. Artı Mimarlık olarak, kırım-döküm aşamasından son kat boyaya, gizli tesisat yenilemesinden akıllı ev altyapısına kadar tüm süreci tek elden ve sözleşmeli sabit fiyat garantisiyle yürütüyoruz.",
+    fullDescription: "Evinizi yenilemek yalnızca estetik bir dokunuş değil; yaşam kalitenizi, konforunuzu ve mülkünüzün değerini artıran kalıcı bir yatırımdır. HS Dekorasyon olarak Konya'da, kırım-döküm aşamasından son kat boyaya, gizli tesisat yenilemesinden montaja kadar tüm süreci doğrudan işinin ehli usta ekibimizle ve sözleşmeli sabit fiyat garantisiyle yürütüyoruz.",
     heroImage: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85",
     gallery: [
       "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80",
@@ -34,12 +34,12 @@ export const services: ServiceItem[] = [
       "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=1000&q=80",
     ],
     features: [
-      "Ücretsiz yerinde mimari keşif ve lazer ölçümlendirme",
-      "Foto-gerçekçi 3D mimari render ve malzeme sunumu",
-      "Elektrik, sıhhi tesisat ve doğalgaz altyapısının %100 yenilenmesi",
+      "Ücretsiz yerinde keşif ve lazer metre ile net ölçümlendirme",
+      "Aracısız doğrudan usta ekibiyle birebir iletişim ve uygulama",
+      "Elektrik, sıhhi tesisat ve doğalgaz altyapısının %100 garantili yenilenmesi",
       "Akustik ve ısı yalıtımlı zemin şapı ve 1. sınıf parke uygulaması",
-      "İç mimar onaylı gizli ledli asma tavan ve aydınlatma senaryoları",
-      "Gecikme cezalı noter tasdikli sözleşme ve 5 yıl garanti"
+      "Usta titizliğiyle gizli ledli asma tavan ve aydınlatma detayları",
+      "Gecikme cezalı yazılı sözleşme ve 5 yıl işçilik garantisi"
     ],
     scope: [
       "Yıkım, kırım, moloz atımı ve hafriyat temizliği",
@@ -51,11 +51,11 @@ export const services: ServiceItem[] = [
       "Özel ölçü mutfak, banyo dolapları ve giyinme odası"
     ],
     process: [
-      { step: "01", title: "Ücretsiz Keşif & İhtiyaç Analizi", desc: "Mekanınızı yerinde inceliyor, statik durumunu kontrol ediyor ve isteklerinizi dinliyoruz." },
-      { step: "02", title: "3D Tasarım & Sabit Fiyat Teklifi", desc: "Evinizin bitmiş halini 3D olarak görselleştiriyor, kuruşu kuruşuna sabit bütçeli teklif sunuyoruz." },
-      { step: "03", title: "Sözleşme & Malzeme Seçimi", desc: "Teslim tarihi, malzeme markaları ve cezai şartların yer aldığı resmi sözleşmemizi imzalıyoruz." },
-      { step: "04", title: "Uygulama & Mimar Denetimi", desc: "Uzman kadromuzla işe başlıyor, her aşamada şantiye şefimizle fotoğraflı ilerleme raporu sunuyoruz." },
-      { step: "05", title: "Detaylı Temizlik & Anahtar Teslim", desc: "Endüstriyel temizliği tamamlanmış mekanınızı garanti sertifikasıyla zamanında teslim ediyoruz." },
+      { step: "01", title: "Ücretsiz Keşif & İhtiyaç Analizi", desc: "Mekanınızı Konya'da yerinde inceliyor, tesisat durumunu kontrol ediyor ve isteklerinizi dinliyoruz." },
+      { step: "02", title: "Planlama & Sabit Fiyat Teklifi", desc: "Evinizin ihtiyaçlarını kalem kalem çıkarıyor, kuruşu kuruşuna sabit bütçeli net usta teklifi sunuyoruz." },
+      { step: "03", title: "Sözleşme & Malzeme Seçimi", desc: "Teslim tarihi, malzeme markaları ve cezai şartların yer aldığı yazılı sözleşmemizi imzalıyoruz." },
+      { step: "04", title: "Uygulama & Usta Başı Denetimi", desc: "Çekirdekten yetişme usta kadromuzla işe başlıyor, her aşamada fotoğraflı ilerleme bilgisi veriyoruz." },
+      { step: "05", title: "Detaylı Temizlik & Anahtar Teslim", desc: "Tüm kaba ve ince temizliği tamamlanmış evinizi söz verdiğimiz günde teslim ediyoruz." },
     ],
     materials: ["Jotun Boya", "VitrA", "Artema", "Çimstone / Silestone", "Egger / Çamsan Parke", "Blum Menteşe & Ray Sistemleri", "Schneider Elektrik"],
     faq: [
@@ -69,7 +69,7 @@ export const services: ServiceItem[] = [
       },
       {
         q: "Tadilat boyunca evde bulunmam gerekiyor mu?",
-        a: "Kesinlikle hayır. Baş mimarımız ve şantiye şefimiz her gün uygulamayı denetler. Haftalık veya günlük WhatsApp video/fotoğraf raporlarıyla süreci oturduğunuz yerden takip edebilirsiniz."
+        a: "Kesinlikle hayır. Usta başımız her gün bizzat işin başında durur ve ekibi yönetir. Günlük WhatsApp video/fotoğraf bilgilendirmeleriyle süreci evinizden veya işinizden rahatça takip edebilirsiniz."
       },
       {
         q: "Hangi garanti şartlarını sunuyorsunuz?",
@@ -82,11 +82,11 @@ export const services: ServiceItem[] = [
   {
     id: "villa-tadilat",
     slug: "villa-tadilat",
-    title: "Lüks Villa Tadilatı & İç Mimarlık",
-    badge: "Özel Mimari Çözümler",
-    subtitle: "Prestijli ve benzersiz müstakil yaşam alanları",
-    shortDescription: "Statik güçlendirmeden akıllı ev otomasyonuna, spa & sauna alanlarından peyzaj ve havuz revizyonuna kadar kusursuz lüks villa yenilemesi.",
-    fullDescription: "Müstakil yaşamın gerektirdiği yüksek mühendislik disiplinini, üst segment iç mimari estetikle harmanlıyoruz. Isı yalıtımı, çatı revizyonu, yerden ısıtma sistemleri, galeri boşluğu tasarımları, şömine uygulamaları ve dış mekan peyzajıyla villanızı modern bir başyapıta dönüştürüyoruz.",
+    title: "Villa & Müstakil Ev Tadilatı",
+    badge: "Kapsamlı Usta Çözümleri",
+    subtitle: "Sağlam altyapılı ve konforlu müstakil yaşam alanları",
+    shortDescription: "Çatı aktarmadan tesisat yenilemeye, yerden ısıtmadan şömine, çevre düzenlemesi ve dış cephe yalıtımına kadar müstakil ev tadilatı.",
+    fullDescription: "Müstakil yaşamın gerektirdiği sağlam tesisat ve yalıtım disiplinini, 20 yıllık usta tecrübemizle harmanlıyoruz. Isı yalıtımı, çatı revizyonu, yerden ısıtma sistemleri, şömine uygulamaları ve dış mekan çevre düzenlemesiyle Konya'daki villanızı dört dörtlük yeniliyoruz.",
     heroImage: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1600&q=85",
     gallery: [
       "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=80",
@@ -95,37 +95,37 @@ export const services: ServiceItem[] = [
       "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=80",
     ],
     features: [
-      "Özel iç mimar ve peyzaj mimarı liderliğinde projelendirme",
-      "KNX / Control4 akıllı ev otomasyonu ve iklimlendirme entegrasyonu",
-      "Yerden ısıtma (Rehau) ve VRF merkezi iklimlendirme sistemleri",
-      "İthal doğal mermer (Calacatta, Nero Marquina) zemin ve şömine kaplamaları",
-      "Özel akustik sinema odası, şarap mahzeni, hamam ve sauna imalatı",
-      "Açık havuz yenileme, kış bahçesi ve giyotin cam sistemleri"
+      "Çekirdekten yetişme uzman usta kadrosuyla projelendirme ve uygulama",
+      "Yerden ısıtma (Rehau/Fraenkische) ve kalorifer altyapısı yenileme",
+      "Doğal mermer, traverten zemin ve şömine kaplama işçiliği",
+      "Çatı onarımı, oluk yenileme ve garantili su-ısı izolasyonu",
+      "Bahçe duvarı, taş döşeme, kış bahçesi ve çevre düzenleme",
+      "Gecikme cezalı yazılı sözleşme ve 5 yıl işçilik garantisi"
     ],
     scope: [
-      "Çatı karkas onarımı, su ve ısı izolasyonu (Braas/Onduline)",
-      "Rehau yerden ısıtma altyapısı & Daikin/Mitsubishi VRF klima",
-      "Doğal ahşap masif lamine parke & İtalyan seramik zeminler",
-      "Özel imalat masif ve lake giyinme odaları, lambri duvar kaplamaları",
-      "Biyoetanol ve odunlu modern şömine tasarımları",
-      "Güvenlik kameraları, çevre aydınlatma ve otomatik sulama altyapısı"
+      "Çatı karkas onarımı, su ve ısı izolasyonu",
+      "Yerden ısıtma altyapısı & mekanik tesisat revizyonu",
+      "Doğal ahşap masif/lamine parke & granit seramik zeminler",
+      "Özel imalat ahşap ve lake dolaplar, giyinme odaları",
+      "Modern şömine ve barbekü imalatı",
+      "Çevre aydınlatma ve bahçe gider tesisatları"
     ],
     process: [
-      { step: "01", title: "Statik ve Mimari İnceleme", desc: "Binanın taşıyıcı elemanları, tesisat kanalları ve bahçe topoğrafyası incelenir." },
-      { step: "02", title: "Konsept & Moodboard Geliştirme", desc: "Yaşam tarzınıza uygun lüks malzeme kombinasyonları ve 3D sanal tur hazırlanır." },
-      { step: "03", title: "Resmi İzinler & Sözleşme", desc: "Gerekli belediye/site yönetim izinleri planlanır ve şantiye takvimi netleştirilir." },
-      { step: "04", title: "Ağır Kırım & Altyapı İmalatı", desc: "Tüm mekanik, elektrik ve izolasyon altyapısı sıfır hata toleransıyla uygulanır." },
-      { step: "05", title: "İnce İşçilik & Peyzaj Teslimi", desc: "Özel mobilyalar, aydınlatmalar monte edilir; bahçe ve havuzla birlikte teslim edilir." },
+      { step: "01", title: "Yerinde Detaylı Keşif", desc: "Binanın çatı, temel, tesisat kanalları ve bahçe durumunu bizzat yerinde inceliyoruz." },
+      { step: "02", title: "İhtiyaç Listesi & Sabit Fiyat", desc: "Yapılacak tüm işleri malzeme markalarıyla birlikte listeleyip net fiyat çıkarıyoruz." },
+      { step: "03", title: "Sözleşme & İş Takvimi", desc: "Başlama ve teslim tarihlerini yazılı sözleşmeyle güvenceye alıyoruz." },
+      { step: "04", title: "Kırım, Tesisat & İzolasyon", desc: "Mekanik, elektrik ve izolasyon altyapısını usta titizliğiyle uyguluyoruz." },
+      { step: "05", title: "İnce İşçilik & Eksiksiz Teslim", desc: "Tüm zemin, boya, dolap ve dış mekan işlerini tamamlayıp anahtarı teslim ediyoruz." },
     ],
-    materials: ["Rehau", "Daikin VRF", "Braas Çatı", "Calacatta Mermer", "Hansgrohe Axor", "Gaggenau / Miele", "Somfy Motorlu Sistemler"],
+    materials: ["Rehau", "Fırat Boru", "Braas Çatı", "Kütahya Porselen", "VitrA", "Jotun", "Çamsan"],
     faq: [
       {
-        q: "Villa tadilatında bahçe ve havuz da kapsama dahil edilebilir mi?",
-        a: "Evet, peyzaj mimarlarımız eşliğinde havuz mekanik revizyonu, mozaik kaplama, taş döşeme, kış bahçesi ve bahçe sulama altyapısı komple anahtar teslim yürütülmektedir."
+        q: "Villa tadilatında bahçe ve çevre düzenlemesi de dahil edilebilir mi?",
+        a: "Evet, dış mekan taş döşeme, çevre aydınlatması, kış bahçesi ve bahçe duvarı gibi tüm dış alan işlerini de anahtar teslim yapıyoruz."
       },
       {
-        q: "Akıllı ev sistemleri projeye nasıl entegre ediliyor?",
-        a: "Kırım aşamasında KNX uyumlu kablolama altyapısı çekilir. Aydınlatma, perde-panjur, yerden ısıtma, klima ve güvenlik kameraları tek bir mobil uygulama ve dokunmatik paneller üzerinden kontrol edilebilir."
+        q: "Kışın ısınma problemini nasıl çözüyorsunuz?",
+        a: "Konya'nın kış şartlarına uygun taşyünü dış cephe mantolaması, çatı izolasyonu ve modern yerden ısıtma sistemleri kurarak ısınma konforunuzu garanti ediyoruz."
       }
     ],
     estimatedDuration: "60 - 90 İş Günü",
@@ -134,11 +134,11 @@ export const services: ServiceItem[] = [
   {
     id: "ofis-tadilat",
     slug: "ofis-tadilat",
-    title: "Ofis & Ticari Alan Tadilatı",
-    badge: "Kurumsal Çözümler",
-    subtitle: "Üretkenliği ve marka prestijini artıran modern çalışma alanları",
-    shortDescription: "Açık ofis planlaması, ses yalıtımlı toplantı odaları, veri/sunucu altyapısı ve kurumsal kimliğinizi yansıtan prestijli mimari tasarımlar.",
-    fullDescription: "Günümüz iş dünyasında ofis mekanları, yalnızca çalışılan bir yer değil; şirketinizin marka değerini, çalışan motivasyonunu ve müşteri algısını belirleyen en önemli vitrindir. Esnek çalışma alanları, akustik konfor, ergonomik aydınlatma ve kesintisiz zayıf akım altyapısıyla işyerinizi geleceğe hazırlıyoruz.",
+    title: "Ofis & Dükkan Tadilatı",
+    badge: "Ticari Çözümler",
+    subtitle: "İş yerinizi canlandıran sağlam ve hızlı tadilat",
+    shortDescription: "Alçıpan bölme duvarlar, asma tavan, zemin kaplamaları, elektrik ve aydınlatma tesisatı ile dükkan ve ofis yenileme.",
+    fullDescription: "HS Dekorasyon olarak Konya genelinde ofis, mağaza, klinik, cafe ve dükkan tadilatlarını, ticari faaliyetinizi aksatmayacak esnek çalışma takvimiyle ve doğrudan usta işçiliğiyle anahtar teslim gerçekleştiriyoruz.",
     heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=85",
     gallery: [
       "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80",
@@ -147,39 +147,39 @@ export const services: ServiceItem[] = [
       "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80",
     ],
     features: [
-      "Hızlı şantiye yönetimi (Hafta sonu ve gece vardiyası imkanı)",
-      "Akustik cam bölme duvarlar ve ses yalıtımlı toplantı kabinleri",
-      "Yükseltilmiş döşeme ve karo halı (Tarkett/Interface) sistemleri",
-      "Zayıf akım, Cat6/Cat7 yapısal kablolama ve sunucu odası yangın güvenliği",
-      "Ergonomik karşılama bankosu, mutfak ve dinlenme (lounge) alanları",
-      "Yangın yönetmeliğine %100 uygun yağmurlama ve kaçış planlaması"
+      "Hızlı şantiye yönetimi (Hafta sonu ve akşam çalışma imkanı)",
+      "Cam ve alçıpan bölme duvarlar, ses yalıtımı",
+      "Dayanıklı zemin kaplamaları (karo halı, laminat, seramik)",
+      "Kuvvetli akım, priz hatları ve LED ofis aydınlatması",
+      "Mutfak/çay ocağı ve WC alanlarının sıfırlanması",
+      "Gecikme cezalı yazılı sözleşme ve garantili teslim"
     ],
     scope: [
-      "Modüler çift camlı alüminyum bölme duvar imalatı",
-      "Taşyünü ve akustik baffle asma tavan sistemleri",
-      "Yükseltilmiş zemin üzeri antistatik karo halı kaplama",
-      "Aydınlatma otomasyonu ve DALI kontrollü ofis armatürleri",
-      "Mutfak/cafe alanı, WC grupları ve yönetici odası mobilyaları"
+      "Alüminyum veya alçıpan bölme duvar imalatı",
+      "Taşyünü, karolam ve modüler asma tavan sistemleri",
+      "Aşınmaya dayanıklı zemin kaplamaları",
+      "Ofis priz grupları ve enerji hatları",
+      "Mutfak alanı, banko ve ıslak hacim tesisatları"
     ],
     process: [
-      { step: "01", title: "Fonksiyonel Alan Planlaması", desc: "Departman büyüklükleri ve sirkülasyon hatları incelenerek yerleşim planı (layout) çizilir." },
-      { step: "02", title: "Mekanik ve Elektrik Projelendirme", desc: "Klima kapasitesi, priz noktaları ve sunucu gereksinimleri hesaplanır." },
-      { step: "03", title: "Sıfır İş Kaybı Planlaması", desc: "Şirketinizin operasyonunu aksatmayacak etaplı veya gece mesaili çalışma takvimi yapılır." },
-      { step: "04", title: "Anahtar Teslim Montaj", desc: "Bölmeler, tavanlar, halılar ve zayıf akım hatları test edilerek devreye alınır." },
+      { step: "01", title: "Yerinde Keşif & Planlama", desc: "İş yerinizin kullanım ihtiyacına göre alan dağılımı ve tesisat noktaları belirlenir." },
+      { step: "02", title: "Maliyet & Malzeme Çizelgesi", desc: "Gereken tüm malzemeler ve işçilik kalemleri şeffaf usta teklifi olarak sunulur." },
+      { step: "03", title: "Hızlı Çalışma Takvimi", desc: "Ticaretinizi aksatmayacak şekilde çalışma saatleri planlanarak işe başlanır." },
+      { step: "04", title: "Anahtar Teslim Montaj", desc: "Bölmeler, tavanlar, aydınlatmalar ve zeminler eksiksiz tamamlanıp teslim edilir." },
     ],
-    materials: ["Interface Karo Halı", "Durlum Metal Asma Tavan", "Philips LED Aydınlatma", "Knauf Alçıpan", "Legrand Zayıf Akım", "Dormakaba Cam Aksesuarları"],
+    materials: ["Knauf Alçıpan", "Philips LED Aydınlatma", "Çamsan Parke", "VitrA", "Schneider Elektrik"],
     faq: [
       {
         q: "Çalışma saatlerimizi aksatmadan tadilat yapabilir misiniz?",
-        a: "Evet. Kurumsal ofis projelerinde iş akışınızı kesintiye uğratmamak adına hafta sonu ve akşam/gece vardiyası planlayabiliyoruz."
+        a: "Evet. Dükkan ve ofis projelerinde iş akışınızı kesintiye uğratmamak adına hafta sonu ve akşam mesaisi planlayabiliyoruz."
       },
       {
-        q: "Server odası ve IT altyapısı hizmete dahil mi?",
-        a: "Evet. Yapısal data kablolaması, rack kabinet montajı, FM200 yangın söndürme altyapısı ve kesintisiz güç kaynağı (UPS) hatları anahtar teslim kurulur."
+        q: "Konya'nın tüm sanayi ve iş merkezlerine hizmet veriyor musunuz?",
+        a: "Evet. BÜSAN, Marangozlar, Karatay Sanayi, Meram, Selçuklu ve tüm Konya merkezindeki iş yerlerine hizmet sunuyoruz."
       }
     ],
-    estimatedDuration: "20 - 35 İş Günü",
-    warranty: "3 Yıl Kurumsal Bakım & Garanti"
+    estimatedDuration: "15 - 25 İş Günü",
+    warranty: "3 Yıl Usta İşçilik Garantisi"
   },
   {
     id: "mutfak-banyo-tadilat",
@@ -187,8 +187,8 @@ export const services: ServiceItem[] = [
     title: "Mutfak & Banyo Yenileme",
     badge: "Hızlı & Detaycı",
     subtitle: "Maksimum depolama, hijyen ve çağdaş estetik",
-    shortDescription: "Su yalıtımı garantili banyo seramikleri, ankastre ada mutfaklar, çizilmez porselen tezgahlar ve akıllı depolama mekanizmaları.",
-    fullDescription: "Evin en çok kullanılan ve en yüksek uzmanlık gerektiren mekanları mutfak ve banyolardır. Su kaçağı riskini sıfıra indiren çift kat sürme izolasyon, lazer teraziyle döşenen büyük ebat (120x240) porselen seramikler, Blum frenli mekanizmalar ve neme dayanıklı lake dolaplarla hayalinizdeki lüks konforu inşa ediyoruz.",
+    shortDescription: "Su yalıtımı garantili banyo seramikleri, kullanışlı mutfak dolapları, çizilmez tezgahlar ve kusursuz sıhhi tesisat.",
+    fullDescription: "Evin en çok kullanılan ve en yüksek ustalık gerektiren mekanları mutfak ve banyolardır. Su kaçağı riskini sıfıra indiren çift kat sürme izolasyon, lazer teraziyle döşenen seramikler, sağlam dolap montajı ve garantili tesisat işçiliğiyle Konya'da banyo ve mutfaklarınızı baştan aşağı yeniliyoruz.",
     heroImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1600&q=85",
     gallery: [
       "https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1000&q=80",
@@ -197,25 +197,25 @@ export const services: ServiceItem[] = [
       "https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1000&q=80",
     ],
     features: [
-      "Mutfakta akrilik / lake kapak ve Blum mekanizma garantisi",
-      "Çizilmez ve ısıya dayanıklı Porselen (Laminam/Dekton) veya Kuvars tezgahlar",
-      "Banyoda su yalıtım testi yapılmış çift kat çimento esaslı izolasyon",
-      "Gömme rezervuar (Geberit) ve şık lineer paslanmaz süzgeçler",
-      "Özel ölçü temperli cam duşakabin ve antrasit / fırçalanmış pirinç armatürler",
-      "Gizli led aydınlatmalı buğu önleyicili akıllı aynalar"
+      "Mutfakta akrilik / membran / lake kapak ve Blum mekanizma",
+      "Çizilmez granit, porselen veya mermerit tezgah seçenekleri",
+      "Banyoda su yalıtım testi yapılmış çift kat sürme izolasyon",
+      "Gömme rezervuar ve modern paslanmaz duş süzgeçleri",
+      "Özel ölçü temperli cam duşakabin ve kaliteli bataryalar",
+      "Gizli LED aydınlatmalı ayna ve tavan uygulamaları"
     ],
     scope: [
-      "Eski dolap, fayans ve tesisatın sökülüp molozun tahliyesi",
-      "PPRC temiz su ve PVC atık su borularının yenilenmesi",
+      "Eski dolap, fayans ve tesisatın sökülüp molozun atılması",
+      "PPRC temiz su ve PVC pis su borularının sıfırdan çekilmesi",
       "Banyoda tam yüzey su izolasyonu ve 24 saatlik sızdırmazlık testi",
-      "Özel üretim CNC detaylı lake mutfak ve banyo mobilyaları",
-      "Ankastre cihaz montajı ve su/gaz bağlantı testleri"
+      "Ölçüye özel mutfak ve banyo dolapları imalatı",
+      "Evye, batarya, duş seti ve ankastre montajı"
     ],
     process: [
-      { step: "01", title: "Ölçü ve Yerleşim Tasarımı", desc: "Köşe açıları, priz ve gider konumları lazer metreyle hassas şekilde çıkarılır." },
-      { step: "02", title: "3D Malzeme Kombinasyonu", desc: "Kapak rengi, tezgah modeli ve kulp seçenekleri 3D çizimde beğeninize sunulur." },
-      { step: "03", title: "Kırım & İzolasyon", desc: "Eski seramikler sökülür, su tesisatı sıfırlanıp izolasyon katmanı çekilir." },
-      { step: "04", title: "Seramik & Mobilya Montajı", desc: "Seramikler döşenir, fabrikamızda üretilen dolap ve tezgahlar monte edilir." },
+      { step: "01", title: "Ölçü ve İhtiyaç Analizi", desc: "Gider boruları, prizler ve dolap yerleşimi yerinde lazer metreyle ölçülür." },
+      { step: "02", title: "Malzeme ve Model Seçimi", desc: "Kapak modeli, renk, kulp ve tezgah seçimi yapılarak net usta fiyatı verilir." },
+      { step: "03", title: "Kırım & Su İzolasyonu", desc: "Eski seramikler sökülür, su tesisatı sıfırlanıp çift kat sürme izolasyon yapılır." },
+      { step: "04", title: "Fayans & Dolap Montajı", desc: "Fayanslar lazer teraziyle döşenir, özel imalat dolaplar ve tezgah monte edilir." },
     ],
     materials: ["Geberit", "Grohe", "VitrA", "Dekton / Çimstone", "Blum", "Laminam Seramik", "Franke Evye"],
     faq: [
@@ -238,7 +238,7 @@ export const services: ServiceItem[] = [
     badge: "Komple Bina Taahhüt",
     subtitle: "Enerji tasarrufu, modern mimari cephe ve değer artışı",
     shortDescription: "Dış cephe mantolama, mekanik seramik/kompozit cephe kaplama, çatı izolasyonu ve bina ortak alanlarının komple yenilenmesi.",
-    fullDescription: "Binalarınızın ömrünü uzatan, kışın %50'ye varan doğalgaz tasarrufu sağlayan ve yapıya modern bir estetik kazandıran bina ölçekli taahhüt hizmetleri. İskele kurulumundan iş güvenliği izinlerine, dış cephe aydınlatmasından ortak merdiven holü ve asansör revizyonuna kadar site yönetimlerine profesyonel çözümler.",
+    fullDescription: "Konya'nın kış ve yaz şartlarına uygun, binalarınızın ömrünü uzatan, kışın %50'ye varan doğalgaz tasarrufu sağlayan ve yapıya modern bir estetik kazandıran bina ölçekli taahhüt hizmetleri. İskele kurulumundan iş güvenliği kurallarına, dış cephe boyasından çatı aktarmaya ve merdiven boşluğu yenilemesine kadar apartman ve site yönetimlerine sağlam usta çözümleri sunuyoruz.",
     heroImage: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1600&q=85",
     gallery: [
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
@@ -262,7 +262,7 @@ export const services: ServiceItem[] = [
     ],
     process: [
       { step: "01", title: "Termal Kamera & Raporlama", desc: "Bina cephesindeki ısı kaçakları ve nem kusurları termal kameralarla tespit edilir." },
-      { step: "02", title: "Site Yönetimi Sunumu & 3D Tasarım", desc: "Apartman toplantılarına bizzat katılıp 3D cephe alternatiflerini kat maliklerine sunuyoruz." },
+      { step: "02", title: "Apartman Yönetimi Keşfi & Teklif", desc: "Apartman toplantılarına bizzat katılıp malzeme kalitesini ve yapılacak iş kalemlerini kat maliklerine şeffafça anlatıyoruz." },
       { step: "03", title: "Güvenlikli İskele & Uygulama", desc: "İş sağlığı ve güvenliği kurallarına uygun iskele kurulup çalışmalar başlatılır." },
       { step: "04", title: "EKB Tanzimi ve Teslim", desc: "Çalışma tamamlanıp Enerji Kimlik Belgesi ile birlikte yönetime teslim edilir." },
     ],

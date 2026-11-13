@@ -20,7 +20,7 @@ const isActive = (href: string) => {
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
-          İstanbul Genelinde Yerinde Ücretsiz Keşif
+          Konya ve Tüm İlçelerinde Ücretsiz Keşif
         </span>
         <span class="flex items-center gap-2 text-slate-200 font-medium">
           <svg class="w-4 h-4 text-gold-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -35,11 +35,11 @@ const isActive = (href: string) => {
           <svg class="w-4 h-4 text-gold-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
-          <span>{siteConfig.phone}</span>
+          <span>Usta Hattı: {siteConfig.phone}</span>
         </a>
         <span class="text-anthracite-700">|</span>
         <a 
-          href={`https://wa.me/${siteConfig.whatsappRaw}?text=Merhaba,%20anahtar%20teslim%20tadilat%20hakkında%20bilgi%20almak%20istiyorum.`} 
+          href={`https://wa.me/${siteConfig.whatsappRaw}?text=Merhaba%20HS%20Dekorasyon,%20Konya'da%20tadilat%20hakkında%20bilgi%20ve%20ücretsiz%20keşif%20istiyorum.`} 
           target="_blank" 
           rel="noopener noreferrer" 
           class="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-bold"
@@ -53,7 +53,7 @@ const isActive = (href: string) => {
     </div>
   </div>
 
-  <!-- Main Navbar: High-contrast Dark Luxury background with Pure White & Gold text -->
+  <!-- Main Navbar -->
   <nav class="bg-anthracite-950 border-b border-anthracite-800 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20 flex-nowrap">
@@ -61,21 +61,19 @@ const isActive = (href: string) => {
         <!-- Logo (Left) -->
         <a href="/" class="flex items-center gap-3 group shrink-0 py-1">
           <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 flex items-center justify-center shadow-gold-glow group-hover:scale-105 transition-transform duration-300 shrink-0">
-            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-anthracite-950 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-            </svg>
+            <span class="text-anthracite-950 font-black text-lg sm:text-xl font-sans tracking-tighter">HS</span>
           </div>
           <div class="flex flex-col">
             <span class="text-xl sm:text-2xl font-serif-heading font-extrabold tracking-tight text-white group-hover:text-gold-400 transition-colors leading-none">
-              ARTI <span class="text-gold-400 font-sans font-bold text-sm tracking-widest uppercase ml-1">MİMARLIK</span>
+              HS <span class="text-gold-400 font-sans font-bold text-sm tracking-widest uppercase ml-1">DEKORASYON</span>
             </span>
             <span class="text-[10px] sm:text-[11px] tracking-wider uppercase text-slate-300 font-semibold mt-1">
-              Anahtar Teslim Tadilat & Taahhüt
+              Konya Anahtar Teslim Tadilat Ustası
             </span>
           </div>
         </a>
 
-        <!-- Desktop Navigation: Razor-sharp pure white text with high-contrast active state -->
+        <!-- Desktop Navigation: High-contrast items -->
         <div class="hidden xl:flex items-center space-x-1.5 2xl:space-x-2 flex-nowrap whitespace-nowrap">
           <a 
             href="/" 
@@ -96,7 +94,7 @@ const isActive = (href: string) => {
                 : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
             }`}
           >
-            Kurumsal
+            Hakkımızda
           </a>
 
           <!-- Services Dropdown -->
@@ -115,34 +113,34 @@ const isActive = (href: string) => {
               </svg>
             </button>
 
-            <!-- Dropdown Menu: High-contrast solid dark background with bold white items -->
+            <!-- Dropdown Menu -->
             <div class="absolute left-0 top-full pt-2 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
               <div class="bg-anthracite-900 border-2 border-gold-500/40 rounded-2xl shadow-2xl p-2.5 space-y-1">
                 <a href="/hizmetler" class="flex flex-col p-3 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 border border-gold-500/30 transition-colors mb-2">
                   <span class="text-xs uppercase tracking-wider text-gold-400 font-extrabold flex items-center justify-between">
-                    Tüm Hizmetlerimizi İnceleyin
+                    Tüm Tadilat Hizmetlerimiz
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                   </span>
                 </a>
                 <a href="/hizmetler/ev-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
-                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Komple Ev Tadilatı</span>
-                  <span class="text-xs text-slate-300 block mt-0.5">A'dan Z'ye daire & konut yenileme</span>
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Komple Daire Tadilatı</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">Kırım, tesisat, sıva, alçı, boya, parke</span>
                 </a>
                 <a href="/hizmetler/villa-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
-                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Lüks Villa Tadilatı</span>
-                  <span class="text-xs text-slate-300 block mt-0.5">Statik güçlendirme, spa & akıllı ev</span>
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Müstakil Ev & Villa Tadilatı</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">Yalıtım, çatı, şap, teras ve çevre düzenleme</span>
                 </a>
                 <a href="/hizmetler/ofis-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
-                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Ofis & Ticari Tadilat</span>
-                  <span class="text-xs text-slate-300 block mt-0.5">Akustik konfor, cam bölmeler & zayıf akım</span>
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Ofis & Dükkan Yenileme</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">İşyeri bölme duvar, asma tavan, zemin</span>
                 </a>
                 <a href="/hizmetler/mutfak-banyo-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
-                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Mutfak & Banyo Yenileme</span>
-                  <span class="text-xs text-slate-300 block mt-0.5">Porselen ada mutfak & su yalıtımı</span>
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Mutfak & Banyo Tadilatı</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">Su tesisatı, fayans döşeme & dolap montajı</span>
                 </a>
                 <a href="/hizmetler/bina-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
-                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Bina Dış Cephe & Mantolama</span>
-                  <span class="text-xs text-slate-300 block mt-0.5">Taşyünü yalıtım & kompozit cephe</span>
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Dış Cephe & Mantolama</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">Isı yalıtımı, çatı aktarma ve dış cephe boya</span>
                 </a>
               </div>
             </div>
@@ -156,7 +154,7 @@ const isActive = (href: string) => {
                 : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
             }`}
           >
-            Süreç
+            Nasıl Çalışırız?
           </a>
 
           <a 
@@ -167,7 +165,7 @@ const isActive = (href: string) => {
                 : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
             }`}
           >
-            Projelerimiz
+            Yaptığımız İşler
           </a>
 
           <a 
@@ -190,7 +188,7 @@ const isActive = (href: string) => {
                 : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
             }`}
           >
-            Blog
+            Tadilat Rehberi
           </a>
 
           <a 
@@ -219,7 +217,7 @@ const isActive = (href: string) => {
           </button>
         </div>
 
-        <!-- Mobile & Tablet Menu Button (Shown on < xl) -->
+        <!-- Mobile & Tablet Menu Button -->
         <div class="flex xl:hidden items-center gap-2.5 shrink-0">
           <button 
             type="button"
@@ -247,7 +245,7 @@ const isActive = (href: string) => {
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu: Crystal clear high-contrast list -->
+    <!-- Mobile Drawer Menu -->
     <div id="mobile-menu" class="xl:hidden hidden bg-anthracite-950 border-b border-anthracite-800 px-4 pt-4 pb-6 space-y-2 max-h-[85vh] overflow-y-auto">
       <a 
         href="/" 
@@ -264,20 +262,20 @@ const isActive = (href: string) => {
           isActive('/hakkimizda') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
         }`}
       >
-        Kurumsal & Hakkımızda
+        Hakkımızda & Usta Ekibimiz
       </a>
       
-      <!-- Mobile Services Accordion -->
+      <!-- Mobile Services List -->
       <div class="border-y border-anthracite-800/80 py-3 my-2 space-y-1.5 bg-anthracite-900/60 rounded-xl px-2">
         <div class="flex items-center justify-between px-3 py-1">
           <span class="text-xs uppercase tracking-wider text-gold-400 font-extrabold">Hizmetlerimiz</span>
           <a href="/hizmetler" class="text-xs text-white font-bold underline hover:text-gold-300">Tümü →</a>
         </div>
-        <a href="/hizmetler/ev-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Komple Ev Tadilatı</a>
-        <a href="/hizmetler/villa-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Lüks Villa Tadilatı</a>
-        <a href="/hizmetler/ofis-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Ofis & Ticari Tadilat</a>
-        <a href="/hizmetler/mutfak-banyo-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Mutfak & Banyo Yenileme</a>
-        <a href="/hizmetler/bina-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Bina Dış Cephe & Mantolama</a>
+        <a href="/hizmetler/ev-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Komple Daire Tadilatı</a>
+        <a href="/hizmetler/villa-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Müstakil Ev & Villa Tadilatı</a>
+        <a href="/hizmetler/ofis-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Ofis & Dükkan Yenileme</a>
+        <a href="/hizmetler/mutfak-banyo-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Mutfak & Banyo Tadilatı</a>
+        <a href="/hizmetler/bina-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Dış Cephe Mantolama</a>
       </div>
 
       <a 
@@ -295,7 +293,7 @@ const isActive = (href: string) => {
           isActive('/projeler') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
         }`}
       >
-        Projelerimiz & Portfolyo
+        Yaptığımız İşler (Öncesi / Sonrası)
       </a>
 
       <a 
@@ -313,7 +311,7 @@ const isActive = (href: string) => {
           isActive('/blog') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
         }`}
       >
-        Blog & Rehber
+        Tadilat Rehberi & İpuçları
       </a>
 
       <a 
@@ -322,7 +320,7 @@ const isActive = (href: string) => {
           isActive('/iletisim') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
         }`}
       >
-        İletişim & Harita
+        İletişim & Usta Konumu
       </a>
 
       <div class="pt-4 border-t border-anthracite-800 flex flex-col gap-2">
@@ -333,7 +331,7 @@ const isActive = (href: string) => {
           <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
           </svg>
-          Hemen Arayın: {siteConfig.phone}
+          Hemen Ustayı Arayın: {siteConfig.phone}
         </a>
       </div>
     </div>
@@ -353,7 +351,6 @@ const isActive = (href: string) => {
       closeIcon.classList.toggle('hidden');
     });
 
-    // Close mobile menu when a navigation link is clicked
     const links = mobileMenu.querySelectorAll('a');
     links.forEach(link => {
       link.addEventListener('click', () => {

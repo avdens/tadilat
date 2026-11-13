@@ -14,72 +14,71 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "2025-ev-tadilati-maliyet-rehberi",
-    title: "2025 Ev Tadilatı Maliyetleri: Kalem Kalem Güncel Bütçe Rehberi",
-    excerpt: "Komple daire tadilatında kırım, elektrik, sıhhi tesisat, seramik, mutfak ve banyo giderleri ne kadar tutar? Sürpriz maliyetlerden nasıl korunursunuz?",
+    title: "2025 Ev Tadilatı Maliyetleri: Ustasından Kalem Kalem Bütçe Rehberi",
+    excerpt: "Komple daire tadilatında kırım, elektrik, su tesisatı, seramik, mutfak ve banyo masrafları ne kadar tutar? Sürpriz maliyetlerden nasıl korunursunuz?",
     category: "Maliyet & Bütçe",
     date: "10 Ocak 2025",
     readTime: "6 dk okuma",
-    author: "Mimar Emre Yılmaz",
-    authorRole: "Baş Mimar & Proje Direktörü",
+    author: "Hasan Usta",
+    authorRole: "HS Dekorasyon Kurucusu & Usta Başı",
     image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
     content: `
       <h2>Ev Tadilatında Bütçeyi Belirleyen Temel Unsurlar</h2>
-      <p>Bir evin yenilenmesi sürecinde maliyeti etkileyen onlarca değişken bulunur. Metrekare büyüklüğü, binanın yaşı, tesisatların fiziki durumu ve tercih edilecek malzeme segmenti (Standart, Konfor, Lüks) nihai bütçeyi doğrudan belirler.</p>
+      <p>Bir evin yenilenmesi sürecinde maliyeti doğrudan etkileyen unsurlar vardır. Metrekare büyüklüğü, binanın yaşı, mevcut su ve elektrik tesisatının durumu ve kullanılacak malzeme kalitesi (Standart, Konfor, Lüks) nihai bütçeyi belirler.</p>
       
-      <h3>1. Altyapı ve Kırım-Döküm Maliyetleri</h3>
-      <p>Özellikle 20 yaşın üzerindeki yapılarda elektrik kabloları bez sargılı veya eski tip bakır olabilir; temiz ve pis su boruları ise galvaniz ve demirden oluşabilir. Bu boruların sıfırlanması, ileride yaşanabilecek su patlaması ve yangın risklerini önlemek için ertelenemez bir zorunluluktur.</p>
+      <h3>1. Altyapı ve Kırım-Döküm Kalemleri</h3>
+      <p>Özellikle 20 yaşın üzerindeki binalarda elektrik hatları ve eski galvaniz demir su boruları mutlaka sıfırlanmalıdır. Kırım aşamasında bu boruların yenilenmesi, sonradan oluşabilecek su patlamalarını ve yangın risklerini önler.</p>
       
       <h3>2. Mutfak ve Banyo İmalatları</h3>
-      <p>Bir daire tadilat bütçesinin yaklaşık %35-%45'i mutfak ve banyo alanlarında harcanır. Akrilik veya lake kapaklar, porselen ya da kuvars tezgahlar ve gömme batarya sistemleri bu kalemin ana maliyetlerini oluşturur.</p>
+      <p>Bir ev tadilatının en kritik ve en çok emek isteyen kısmı mutfak ve banyodur. Kaliteli dolap kapakları, frenli menteşeler, çizilmez tezgah ve gömme rezervuar sistemleri bu alanın temelini oluşturur.</p>
 
-      <h3>3. Sürpriz Harcamalardan Kaçınmanın Yolu: Sabit Fiyat Sözleşmesi</h3>
-      <p>En sık karşılaşılan sorun, işe başladıktan sonra ustaların veya taşeronların 'burası da çürük çıktı, şu da değişecek' diyerek başlangıç bütçesini %50 aşmasıdır. Profesyonel anahtar teslim mimarlık firmaları, detaylı keşif yaparak keşif anında tüm riskleri sözleşmeye dahil eder ve sabit fiyat garantisi verir.</p>
+      <h3>3. Sürpriz Masraflardan Korunmanın Yolu: Doğrudan Usta ile Sabit Fiyat Sözleşmesi</h3>
+      <p>En sık yaşanan sorun, işe başlandıktan sonra 'burası da bozukmuş, şu da değişecek' denilerek bütçenin katlanmasıdır. HS Dekorasyon olarak Konya'da yerinde ücretsiz keşif yapıyor, her kalemi sözleşmeye yazıyor ve sabit fiyat garantisi veriyoruz.</p>
     `
   },
   {
     slug: "anahtar-teslim-tadilatta-yapilan-7-hata",
-    title: "Anahtar Teslim Tadilatta En Çok Yapılan 7 Hata ve Çözümleri",
-    excerpt: "Sözleşmesiz usta çalıştırmak, 3D çizim yaptırmamak ve su yalıtımını ihmal etmek... Tadilata başlamadan önce bu rehberi mutlaka okuyun.",
+    title: "Anahtar Teslim Tadilatta En Çok Yapılan Hatalar ve Çözümleri",
+    excerpt: "Sözleşmesiz iş yaptırmak, farklı taşeronlarla tek tek uğraşmak ve su yalıtımını ihmal etmek... Tadilata başlamadan önce bu usta tavsiyelerini okuyun.",
     category: "Tadilat İpuçları",
     date: "24 Şubat 2025",
     readTime: "5 dk okuma",
-    author: "İç Mimar Zeynep Arslan",
-    authorRole: "Tasarım Ekip Lideri",
+    author: "Hasan Usta",
+    authorRole: "HS Dekorasyon Kurucusu & Usta Başı",
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
     content: `
-      <h2>Tadilat Sürecini Kabusa Çevirmemek İçin Nelere Dikkat Edilmeli?</h2>
-      <p>Ev tadilatı heyecan verici bir serüven olabileceği gibi, plansız başlandığında bütçe aşımı, gecikmeler ve usta anlaşmazlıklarıyla yıpratıcı bir sürece de dönüşebilir.</p>
+      <h2>Tadilat Sürecini Sorunsuz Geçirmek İçin Usta Tavsiyeleri</h2>
+      <p>Ev tadilatı doğru usta ekibiyle çalışıldığında huzurlu ve keyifli bir süreçtir. Ancak plansız başlandığında bütçe aşımı ve usta kavgalarıyla yıpratıcı bir hale gelebilir.</p>
 
-      <h3>1. Ayrı Ayrı Taşeronlarla Uğraşmak</h3>
-      <p>Tesisatçıyı, elektrikçiyi, boyacıyı ve parkeciyi ayrı ayrı bulduğunuzda; parkeci boyacıyı, boyacı alçıcıyı suçlar. Sorumluluk kimseye ait olmaz. Anahtar teslim bir mimarlık ofisiyle çalışmak tek muhatap ve tek sorumlu demektir.</p>
+      <h3>1. Farklı Ustalarla Tek Tek Uğraşmak</h3>
+      <p>Tesisatçıyı, elektrikçiyi, boyacıyı, fayansçıyı ayrı ayrı bulduğunuzda; fayansçı tesisatçıyı, boyacı alçıcıyı suçlar. Ortada tek bir sorumlu kalmaz. Anahtar teslim usta ekibiyle çalışmak tek muhatap ve eksiksiz sorumluluk demektir.</p>
 
-      <h3>2. Yazılı ve Cezai Şartlı Sözleşme Yapmamak</h3>
-      <p>İşin teslim tarihi gün olarak netleştirilmeli ve olası gecikmelerde günlük cezai şart sözleşmede yer almalıdır. Ayrıca malzeme markaları (örn. 'Jotun boya, VitrA seramik, Rehau boru') açıkça yazılmalıdır.</p>
+      <h3>2. Yazılı ve Gün Belirtilmiş Sözleşme Yapmamak</h3>
+      <p>İşin başlama ve bitiş tarihi net olarak yazılmalı, malzeme markaları (Jotun, VitrA, Fırat Boru, Çamsan vb.) açıkça listelenmelidir.</p>
 
-      <h3>3. Banyo Su İzolasyonunu Es Geçmek</h3>
-      <p>Yeni döşenen pahalı seramiklerin altından alt komşuya su sızması, yapılan tüm masrafın çöpe gitmesine neden olur. Çift kat elastik sürme izolasyon ve 24 saatlik sızdırmazlık testi atlanmamalıdır.</p>
+      <h3>3. Banyo Su İzolasyonunu İhmal Etmek</h3>
+      <p>Yeni döşenen seramiklerin altına su yalıtımı yapılmazsa alt komşuya su sızar ve seramikleri kırmak zorunda kalırsınız. Çift kat sürme izolasyon ve su sızdırmazlık testi asla atlanmamalıdır.</p>
     `
   },
   {
     slug: "acik-mutfak-ada-tezgah-tasarimi",
-    title: "Açık Mutfak ve Ada Tezgah Tasarımı: Trendler ve Statik Kurallar",
-    excerpt: "Salonu mutfakla birleştirerek ferah bir yaşam alanı oluştururken hangi duvarlar yıkılabilir? Ada tezgah ölçüleri nasıl olmalıdır?",
-    category: "İç Mimarlık",
+    title: "Açık Mutfak ve Ada Tezgah Uygulamasında Usta Püf Noktaları",
+    excerpt: "Salonu mutfakla birleştirerek ferah bir yaşam alanı oluştururken hangi duvarlar kırılabilir? Ada tezgah tesisatı nasıl çekilir?",
+    category: "Usta Rehberi",
     date: "18 Mart 2025",
     readTime: "4 dk okuma",
-    author: "Mimar Emre Yılmaz",
-    authorRole: "Baş Mimar & Proje Direktörü",
+    author: "Hasan Usta",
+    authorRole: "HS Dekorasyon Kurucusu & Usta Başı",
     image: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85",
     content: `
-      <h2>Açık Mutfak (Amerikan Mutfak) Neden Bu Kadar Popüler?</h2>
-      <p>Modern yaşam biçimi, yemek hazırlama sürecini izole bir aktivite olmaktan çıkarıp aile ve misafirlerle sosyalleşilen keyifli bir alana dönüştürdü. Salon ile mutfağın birleşimi hem ışığı artırır hem de alana ferahlık katar.</p>
+      <h2>Açık Mutfak Planlamasında Dikkat Edilecekler</h2>
+      <p>Konya'da son dönemde ferah ve geniş yaşam alanları isteyen ev sahipleri açık mutfak konseptini çokça tercih ediyor. Mutfak ve salonun birleşmesi mekanın aydınlık ve geniş görünmesini sağlar.</p>
 
-      <h3>Statik Taşıyıcı Duvarlara Dikkat!</h3>
-      <p>Duvar yıkımı öncesinde binanın mimari ve statik projesi mutlaka incelenmelidir. Kolon, perde beton veya ana kirişlere hiçbir şekilde müdahale edilemez; yalnızca dolgu tuğla veya gazbeton ara bölme duvarlar kaldırılabilir.</p>
+      <h3>Taşıyıcı Kolon ve Kirişlere Asla Dokunulmaz!</h3>
+      <p>Kırım işlemine başlamadan önce binanın taşıyıcı elemanları kontrol edilir. Kolon, perde beton ve ana kirişlere kesinlikle dokunulmaz; yalnızca ara bölme tuğla veya gazbeton duvarlar kaldırılabilir.</p>
 
-      <h3>Ada Tezgah İçin İdeal Ölçüler</h3>
-      <p>Bir ada tezgahın etrafında rahat hareket edebilmek için mutfak tezgahı ile ada arasında en az 90 cm ile 110 cm geçiş mesafesi bırakılmalıdır. Adada ocak veya evye planlanıyorsa, zemin şapı atılmadan önce elektrik ve su/gider hatları taşınmalıdır.</p>
+      <h3>Ada Tezgah İçin Tesisat Püf Noktaları</h3>
+      <p>Eğer ada tezgaha evye veya ocak gelecekse, zemin şapı dökülmeden önce su, gider ve elektrik kabloları zemin altından çekilmelidir. Şap atıldıktan sonra bu hatları taşımak zor ve masraflı olur.</p>
     `
   }
 ];
-
