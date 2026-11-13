@@ -1,0 +1,192 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import TrustBadges from "../components/TrustBadges.astro";
+import CTASection from "../components/CTASection.astro";
+import { siteConfig } from "../data/siteConfig";
+
+const teamMembers = [
+  {
+    name: "Emre Yılmaz",
+    role: "Kurucu & Baş Mimar (İTÜ Mimarlık)",
+    exp: "18 Yıl Deneyim",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
+    bio: "İTÜ Mimarlık mezunu. 18 yıllık şantiye ve lüks konut renovasyonu deneyimiyle projelerin tüm statik ve estetik sürecini bizzat yönetir."
+  },
+  {
+    name: "Zeynep Arslan",
+    role: "İç Mimari Ekip Lideri (MSGSÜ)",
+    exp: "11 Yıl Deneyim",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+    bio: "Mimar Sinan mezunu. Fonksiyonel mekan çözümleri, malzeme moodboard'ları ve foto-gerçekçi 3D modelleme alanında uzman."
+  },
+  {
+    name: "Hakan Demir",
+    role: "Baş İnşaat Mühendisi & Şantiye Direktörü",
+    exp: "15 Yıl Deneyim",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
+    bio: "Tüm sıhhi, mekanik, elektrik altyapı testlerini ve şantiye takviminin milimetrik olarak gününde teslim edilmesini sağlar."
+  }
+];
+
+const brandPartners = [
+  "Jotun Boya", "VitrA", "Grohe", "Rehau", "Geberit", "Schneider Electric", "Blum", "Çimstone", "Knauf", "Egger Parke"
+];
+---
+
+<Layout 
+  title={`Kurumsal & Hakkımızda | ${siteConfig.brandName}`}
+  description="18 yıllık köklü deneyim, uzman mimari ve mühendis kadromuzla İstanbul'da anahtar teslim ev, ofis ve bina tadilatında güvenin adresi."
+>
+  <Breadcrumb items={[{ label: "Kurumsal & Hakkımızda" }]} />
+
+  <!-- Hero Banner -->
+  <section class="relative bg-anthracite-950 text-white py-20 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20">
+      <img 
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80" 
+        alt="Kurumsal" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          18 Yıllık Mimari Miras
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-serif-heading font-extrabold text-white tracking-tight mb-4">
+          Tadilatı Stres Değil, <br />
+          <span class="gold-gradient-text">Keyifli Bir Dönüşüme</span> Çeviriyoruz.
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          {siteConfig.brandName}, klasik usta pazarlıklarının ve sürpriz maliyetlerin yarattığı güvensizliği ortadan kaldırmak için kuruldu. 
+          Tek elden, sözleşmeli sabit fiyat garantisiyle A'dan Z'ye anahtar teslim mimari çözümler sunuyoruz.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story & Vision -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold uppercase tracking-wider">
+            Hikayemiz & Felsefemiz
+          </span>
+          <h2 class="text-3xl font-serif-heading font-bold text-anthracite-950">
+            "Müşterimiz şantiyeyi değil, yeni hayatını hayal etmeli."
+          </h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            2007 yılında mimarlık ve inşaat mühendisliği disiplinini tek çatı altında birleştirerek yola çıktık. Bugüne kadar Kadıköy'den Sarıyer'e, Beşiktaş'tan Ataşehir'e kadar 450'den fazla daire, villa, genel müdürlük ofisi ve komple bina taahhüt projesini sıfır hata ve gününde teslim ettik.
+          </p>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Bizim için tadilat yalnızca seramik değiştirmek ya da duvar boyamak değildir. Bir evin tesisatını sıfırlamak, güvenli elektrik hatları kurmak, ısı ve ses yalıtımını maksimize etmek ve nihayetinde o mekanda yaşayan insanların ruhuna huzur veren bir estetik inşa etmektir.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-2xl font-bold font-serif-heading text-gold-600 block mb-1">450+</span>
+              <span class="text-xs text-slate-600 font-medium">Teslim Edilen Proje</span>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+              <span class="text-2xl font-bold font-serif-heading text-gold-600 block mb-1">5 Yıl</span>
+              <span class="text-xs text-slate-600 font-medium">Resmi İşçilik Garantisi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            <img 
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" 
+              alt="Artı Mimarlık Ofisi" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-anthracite-950 text-white p-6 rounded-2xl border border-gold-500/40 shadow-2xl max-w-xs hidden sm:block">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-8 h-8 rounded-full bg-gold-500 text-anthracite-950 font-bold flex items-center justify-center text-xs">
+                ✓
+              </div>
+              <span class="text-xs font-bold text-gold-400">Sabit Fiyat Güvencesi</span>
+            </div>
+            <p class="text-[11px] text-slate-300">
+              Keşif sonrası onaylanan bütçe dışında hiçbir ek kalem talep edilmez.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <TrustBadges />
+
+  <!-- Leadership Team -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold uppercase tracking-wider mb-3">
+          Uzman Kadromuz
+        </span>
+        <h2 class="text-3xl font-serif-heading font-bold text-anthracite-950">
+          Projenizi Emanet Ettiğiniz Mimarlar ve Mühendisler
+        </h2>
+        <p class="text-sm text-slate-600 mt-2">
+          Her şantiyemiz belgeli iş güvenliği uzmanları, iç mimarlar ve şantiye şeflerimizin bizzat kontrolündedir.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {teamMembers.map((member) => (
+          <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-card-elevated hover:shadow-xl transition-all duration-300">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img 
+                src={member.image} 
+                alt={member.name} 
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              />
+            </div>
+            <div class="p-6">
+              <span class="text-[11px] text-gold-600 font-bold uppercase tracking-wider block mb-1">
+                {member.exp}
+              </span>
+              <h3 class="text-lg font-bold font-serif-heading text-anthracite-950 mb-1">
+                {member.name}
+              </h3>
+              <p class="text-xs text-slate-500 font-medium mb-3">
+                {member.role}
+              </p>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                {member.bio}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials & Brands Partner Wall -->
+  <section class="py-16 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-6">
+        Projelerimizde Yalnızca 1. Sınıf Tescilli Markaları Kullanıyoruz
+      </span>
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-8">
+        {brandPartners.map((brand) => (
+          <div class="px-5 py-3 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm font-semibold text-slate-700 hover:border-gold-500/60 hover:text-gold-600 transition-colors">
+            {brand}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</Layout>
+

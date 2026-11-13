@@ -1,0 +1,366 @@
+---
+import { siteConfig } from "../data/siteConfig";
+
+const currentPath = Astro.url.pathname;
+
+// Helper to check active state
+const isActive = (href: string) => {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+};
+---
+
+<header class="sticky top-0 z-40 w-full shadow-2xl transition-all duration-300">
+  <!-- Top Bar: Shown on md+ screens -->
+  <div class="bg-anthracite-950 text-white text-xs py-2 px-4 border-b border-anthracite-800 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-6">
+        <span class="flex items-center gap-2 text-slate-200 font-medium">
+          <svg class="w-4 h-4 text-gold-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          İstanbul Genelinde Yerinde Ücretsiz Keşif
+        </span>
+        <span class="flex items-center gap-2 text-slate-200 font-medium">
+          <svg class="w-4 h-4 text-gold-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          {siteConfig.workingHours}
+        </span>
+      </div>
+
+      <div class="flex items-center space-x-5">
+        <a href={`tel:${siteConfig.phoneRaw}`} class="flex items-center gap-2 text-white font-bold hover:text-gold-300 transition-colors">
+          <svg class="w-4 h-4 text-gold-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          <span>{siteConfig.phone}</span>
+        </a>
+        <span class="text-anthracite-700">|</span>
+        <a 
+          href={`https://wa.me/${siteConfig.whatsappRaw}?text=Merhaba,%20anahtar%20teslim%20tadilat%20hakkında%20bilgi%20almak%20istiyorum.`} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 transition-colors font-bold"
+        >
+          <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span>WhatsApp Hattı</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar: High-contrast Dark Luxury background with Pure White & Gold text -->
+  <nav class="bg-anthracite-950 border-b border-anthracite-800 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 flex-nowrap">
+        
+        <!-- Logo (Left) -->
+        <a href="/" class="flex items-center gap-3 group shrink-0 py-1">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 flex items-center justify-center shadow-gold-glow group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <svg class="w-5 h-5 sm:w-6 sm:h-6 text-anthracite-950 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl sm:text-2xl font-serif-heading font-extrabold tracking-tight text-white group-hover:text-gold-400 transition-colors leading-none">
+              ARTI <span class="text-gold-400 font-sans font-bold text-sm tracking-widest uppercase ml-1">MİMARLIK</span>
+            </span>
+            <span class="text-[10px] sm:text-[11px] tracking-wider uppercase text-slate-300 font-semibold mt-1">
+              Anahtar Teslim Tadilat & Taahhüt
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation: Razor-sharp pure white text with high-contrast active state -->
+        <div class="hidden xl:flex items-center space-x-1.5 2xl:space-x-2 flex-nowrap whitespace-nowrap">
+          <a 
+            href="/" 
+            class={`px-3.5 py-2 rounded-xl text-sm transition-all whitespace-nowrap ${
+              isActive('/') 
+                ? 'bg-gold-500 text-anthracite-950 font-extrabold shadow-gold-glow' 
+                : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
+            }`}
+          >
+            Ana Sayfa
+          </a>
+          
+          <a 
+            href="/hakkimizda" 
+            class={`px-3.5 py-2 rounded-xl text-sm transition-all whitespace-nowrap ${
+              isActive('/hakkimizda') 
+                ? 'bg-gold-500 text-anthracite-950 font-extrabold shadow-gold-glow' 
+                : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
+            }`}
+          >
+            Kurumsal
+          </a>
+
+          <!-- Services Dropdown -->
+          <div class="relative group">
+            <button 
+              type="button"
+              class={`px-3.5 py-2 rounded-xl text-sm transition-all flex items-center gap-1.5 whitespace-nowrap ${
+                isActive('/hizmetler') 
+                  ? 'bg-gold-500 text-anthracite-950 font-extrabold shadow-gold-glow' 
+                  : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
+              }`}
+            >
+              <span>Hizmetlerimiz</span>
+              <svg class={`w-4 h-4 transition-transform group-hover:rotate-180 ${isActive('/hizmetler') ? 'text-anthracite-950' : 'text-gold-400'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+
+            <!-- Dropdown Menu: High-contrast solid dark background with bold white items -->
+            <div class="absolute left-0 top-full pt-2 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform group-hover:translate-y-0 translate-y-2 z-50 pointer-events-none group-hover:pointer-events-auto">
+              <div class="bg-anthracite-900 border-2 border-gold-500/40 rounded-2xl shadow-2xl p-2.5 space-y-1">
+                <a href="/hizmetler" class="flex flex-col p-3 rounded-xl bg-gold-500/10 hover:bg-gold-500/20 border border-gold-500/30 transition-colors mb-2">
+                  <span class="text-xs uppercase tracking-wider text-gold-400 font-extrabold flex items-center justify-between">
+                    Tüm Hizmetlerimizi İnceleyin
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                  </span>
+                </a>
+                <a href="/hizmetler/ev-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Komple Ev Tadilatı</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">A'dan Z'ye daire & konut yenileme</span>
+                </a>
+                <a href="/hizmetler/villa-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Lüks Villa Tadilatı</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">Statik güçlendirme, spa & akıllı ev</span>
+                </a>
+                <a href="/hizmetler/ofis-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Ofis & Ticari Tadilat</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">Akustik konfor, cam bölmeler & zayıf akım</span>
+                </a>
+                <a href="/hizmetler/mutfak-banyo-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Mutfak & Banyo Yenileme</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">Porselen ada mutfak & su yalıtımı</span>
+                </a>
+                <a href="/hizmetler/bina-tadilat" class="block p-2.5 rounded-xl hover:bg-anthracite-800 transition-colors group/item">
+                  <span class="text-sm font-bold text-white group-hover/item:text-gold-400 block">Bina Dış Cephe & Mantolama</span>
+                  <span class="text-xs text-slate-300 block mt-0.5">Taşyünü yalıtım & kompozit cephe</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a 
+            href="/surec" 
+            class={`px-3.5 py-2 rounded-xl text-sm transition-all whitespace-nowrap ${
+              isActive('/surec') 
+                ? 'bg-gold-500 text-anthracite-950 font-extrabold shadow-gold-glow' 
+                : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
+            }`}
+          >
+            Süreç
+          </a>
+
+          <a 
+            href="/projeler" 
+            class={`px-3.5 py-2 rounded-xl text-sm transition-all whitespace-nowrap ${
+              isActive('/projeler') 
+                ? 'bg-gold-500 text-anthracite-950 font-extrabold shadow-gold-glow' 
+                : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
+            }`}
+          >
+            Projelerimiz
+          </a>
+
+          <a 
+            href="/fiyat-hesapla" 
+            class={`px-3.5 py-2 rounded-xl text-sm transition-all flex items-center gap-2 whitespace-nowrap ${
+              isActive('/fiyat-hesapla') 
+                ? 'bg-gold-500 text-anthracite-950 font-extrabold shadow-gold-glow' 
+                : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
+            }`}
+          >
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse"></span>
+            Fiyat Hesapla
+          </a>
+
+          <a 
+            href="/blog" 
+            class={`px-3.5 py-2 rounded-xl text-sm transition-all whitespace-nowrap ${
+              isActive('/blog') 
+                ? 'bg-gold-500 text-anthracite-950 font-extrabold shadow-gold-glow' 
+                : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
+            }`}
+          >
+            Blog
+          </a>
+
+          <a 
+            href="/iletisim" 
+            class={`px-3.5 py-2 rounded-xl text-sm transition-all whitespace-nowrap ${
+              isActive('/iletisim') 
+                ? 'bg-gold-500 text-anthracite-950 font-extrabold shadow-gold-glow' 
+                : 'text-white font-bold hover:text-gold-300 hover:bg-white/10'
+            }`}
+          >
+            İletişim
+          </a>
+        </div>
+
+        <!-- Action CTA Button (Right) -->
+        <div class="hidden xl:flex items-center shrink-0">
+          <button 
+            type="button" 
+            data-open-inspection-modal
+            class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-extrabold text-anthracite-950 bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 rounded-xl shadow-gold-glow hover:brightness-110 active:scale-95 transition-all duration-200 cursor-pointer whitespace-nowrap border border-white/20"
+          >
+            <span>Ücretsiz Keşif İste</span>
+            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile & Tablet Menu Button (Shown on < xl) -->
+        <div class="flex xl:hidden items-center gap-2.5 shrink-0">
+          <button 
+            type="button"
+            data-open-inspection-modal
+            class="px-3.5 py-2 text-xs font-extrabold bg-gradient-to-r from-gold-400 to-gold-600 text-anthracite-950 rounded-xl shadow-md"
+          >
+            Keşif İste
+          </button>
+          
+          <button 
+            id="mobile-menu-btn" 
+            type="button" 
+            aria-label="Menüyü Aç"
+            class="p-2.5 rounded-xl text-white hover:text-gold-400 bg-anthracite-900 hover:bg-anthracite-800 focus:outline-none transition-colors border border-anthracite-700"
+          >
+            <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu: Crystal clear high-contrast list -->
+    <div id="mobile-menu" class="xl:hidden hidden bg-anthracite-950 border-b border-anthracite-800 px-4 pt-4 pb-6 space-y-2 max-h-[85vh] overflow-y-auto">
+      <a 
+        href="/" 
+        class={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${
+          isActive('/') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
+        }`}
+      >
+        Ana Sayfa
+      </a>
+      
+      <a 
+        href="/hakkimizda" 
+        class={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${
+          isActive('/hakkimizda') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
+        }`}
+      >
+        Kurumsal & Hakkımızda
+      </a>
+      
+      <!-- Mobile Services Accordion -->
+      <div class="border-y border-anthracite-800/80 py-3 my-2 space-y-1.5 bg-anthracite-900/60 rounded-xl px-2">
+        <div class="flex items-center justify-between px-3 py-1">
+          <span class="text-xs uppercase tracking-wider text-gold-400 font-extrabold">Hizmetlerimiz</span>
+          <a href="/hizmetler" class="text-xs text-white font-bold underline hover:text-gold-300">Tümü →</a>
+        </div>
+        <a href="/hizmetler/ev-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Komple Ev Tadilatı</a>
+        <a href="/hizmetler/villa-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Lüks Villa Tadilatı</a>
+        <a href="/hizmetler/ofis-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Ofis & Ticari Tadilat</a>
+        <a href="/hizmetler/mutfak-banyo-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Mutfak & Banyo Yenileme</a>
+        <a href="/hizmetler/bina-tadilat" class="block px-3 py-2 rounded-lg text-sm text-slate-200 font-semibold hover:bg-white/10 hover:text-gold-400">Bina Dış Cephe & Mantolama</a>
+      </div>
+
+      <a 
+        href="/surec" 
+        class={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${
+          isActive('/surec') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
+        }`}
+      >
+        Nasıl Çalışırız? (Süreç)
+      </a>
+
+      <a 
+        href="/projeler" 
+        class={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${
+          isActive('/projeler') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
+        }`}
+      >
+        Projelerimiz & Portfolyo
+      </a>
+
+      <a 
+        href="/fiyat-hesapla" 
+        class={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${
+          isActive('/fiyat-hesapla') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-gold-400 hover:bg-white/10'
+        }`}
+      >
+        ✨ Fiyat & Keşif Hesaplama
+      </a>
+
+      <a 
+        href="/blog" 
+        class={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${
+          isActive('/blog') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
+        }`}
+      >
+        Blog & Rehber
+      </a>
+
+      <a 
+        href="/iletisim" 
+        class={`block px-4 py-3 rounded-xl text-base font-bold transition-colors ${
+          isActive('/iletisim') ? 'bg-gold-500 text-anthracite-950 shadow-md' : 'text-white hover:bg-white/10'
+        }`}
+      >
+        İletişim & Harita
+      </a>
+
+      <div class="pt-4 border-t border-anthracite-800 flex flex-col gap-2">
+        <a 
+          href={`tel:${siteConfig.phoneRaw}`} 
+          class="flex items-center justify-center gap-2 py-3.5 bg-anthracite-900 border border-anthracite-700 text-white rounded-xl text-sm font-bold shadow-md"
+        >
+          <svg class="w-4 h-4 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Hemen Arayın: {siteConfig.phone}
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  if (mobileBtn && mobileMenu && menuIcon && closeIcon) {
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when a navigation link is clicked
+    const links = mobileMenu.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+  }
+</script>

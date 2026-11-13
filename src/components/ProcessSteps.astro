@@ -1,0 +1,96 @@
+---
+interface Props {
+  showTitle?: boolean;
+}
+
+const { showTitle = true } = Astro.props;
+
+const steps = [
+  {
+    step: "01",
+    title: "Ücretsiz Keşif & Lazer Ölçüm",
+    badge: "24 Saat İçinde",
+    desc: "Mekanınızı mimar ekibimizle yerinde inceliyor, statik taşıyıcıları ve gizli tesisat hatlarını lazer cihazlarla milimetrik olarak ölçüyor, ihtiyaçlarınızı dinliyoruz.",
+    icon: "M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+  },
+  {
+    step: "02",
+    title: "Foto-Gerçekçi 3D Tasarım",
+    badge: "Sanal Tur İle",
+    desc: "Evinizin tadilat bittiğinde nasıl görüneceğini henüz tek bir çivi bile çakılmadan 3D render görselleriyle birebir hazırlayıp onayınıza sunuyoruz.",
+    icon: "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+  },
+  {
+    step: "03",
+    title: "Sabit Fiyat & Cezai Şartlı Sözleşme",
+    badge: "Sürpriz Masrafa Son",
+    desc: "Kullanılacak tüm malzemelerin markaları (Jotun, VitrA, Grohe vb.), teslim tarihi ve olası gecikmelere karşı günlük cezai şart resmi sözleşmemizde netleştirilir.",
+    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+  },
+  {
+    step: "04",
+    title: "Mimar Denetimli Kusursuz Uygulama",
+    badge: "Günlük WhatsApp Raporu",
+    desc: "Şantiye şefimiz ve mimarlarımız işin her aşamasını denetler. Tesisat, alçı, seramik ve mobilya montajı birbirini aksatmadan yürütülür; siz video ile takip edersiniz.",
+    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+  },
+  {
+    step: "05",
+    title: "Endüstriyel Temizlik & Anahtar Teslim",
+    badge: "5 Yıl Garanti Belgesi",
+    desc: "Tadilat sonrası inşaat tozundan arındırılmış, pırıl pırıl temizlenmiş mekanınızı resmi 5 yıl garanti sertifikamız ve teknik bakım rehberimizle teslim ediyoruz.",
+    icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+  }
+];
+---
+
+<div class="relative">
+  {showTitle && (
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold uppercase tracking-wider mb-3">
+        Çalışma Modelimiz
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-anthracite-950">
+        5 Adımda Kusursuz Anahtar Teslim Süreci
+      </h2>
+      <p class="text-sm text-slate-600 mt-3">
+        Tadilatı stresli ve belirsiz bir süreç olmaktan çıkarıyoruz. Her adımı kayıtlı, planlı ve zamanında yürütüyoruz.
+      </p>
+    </div>
+  )}
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
+    <!-- Connecting line on desktop -->
+    <div class="hidden lg:block absolute top-12 left-10 right-10 h-0.5 bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 -z-0 opacity-40"></div>
+
+    {steps.map((item) => (
+      <div class="relative bg-white rounded-2xl p-6 border border-slate-200/80 shadow-card-elevated hover:shadow-xl hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <!-- Step indicator and icon -->
+          <div class="flex items-center justify-between mb-5">
+            <div class="w-12 h-12 rounded-xl bg-anthracite-950 text-gold-400 font-serif-heading font-bold text-lg flex items-center justify-center border-2 border-gold-500 shadow-md group-hover:scale-110 group-hover:bg-gold-500 group-hover:text-anthracite-950 transition-all z-10">
+              {item.step}
+            </div>
+            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-gold-50 text-gold-700 border border-gold-200">
+              {item.badge}
+            </span>
+          </div>
+
+          <h3 class="text-base font-bold text-anthracite-950 mb-2 group-hover:text-gold-600 transition-colors">
+            {item.title}
+          </h3>
+
+          <p class="text-xs text-slate-600 leading-relaxed">
+            {item.desc}
+          </p>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[11px] font-semibold text-gold-600">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon}/></svg>
+          Sıfır Hata Toleransı
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+

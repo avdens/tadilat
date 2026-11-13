@@ -1,0 +1,125 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import CTASection from "../../components/CTASection.astro";
+import { siteConfig } from "../../data/siteConfig";
+import { blogPosts, type BlogPost } from "../../data/blog";
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: BlogPost;
+}
+
+const { post } = Astro.props;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "description": post.excerpt,
+  "image": post.image,
+  "author": {
+    "@type": "Person",
+    "name": post.author,
+    "jobTitle": post.authorRole
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": siteConfig.brandName,
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artimimarlik.com.tr/logo.png"
+    }
+  },
+  "datePublished": "2025-01-10",
+  "dateModified": "2025-01-10"
+};
+---
+
+<Layout 
+  title={`${post.title} | ${siteConfig.brandName}`}
+  description={post.excerpt}
+  image={post.image}
+>
+  <Breadcrumb 
+    items={[
+      { label: "Blog", href: "/blog" },
+      { label: post.title }
+    ]} 
+  />
+
+  <article class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Article Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-700 text-xs font-semibold uppercase tracking-wider mb-4">
+          {post.category}
+        </span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-serif-heading font-extrabold text-anthracite-950 tracking-tight leading-tight mb-6">
+          {post.title}
+        </h1>
+        <div class="flex items-center justify-center gap-4 text-xs text-slate-500">
+          <span>Yazar: <strong>{post.author}</strong> ({post.authorRole})</span>
+          <span>•</span>
+          <span>{post.date}</span>
+          <span>•</span>
+          <span>{post.readTime}</span>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl mb-12 border border-slate-200">
+        <img 
+          src={post.image} 
+          alt={post.title} 
+          class="w-full h-full object-cover" 
+        />
+      </div>
+
+      <!-- Article Body Content -->
+      <div class="prose prose-lg max-w-none text-slate-700 leading-relaxed space-y-6 [&_h2]:text-2xl [&_h2]:font-serif-heading [&_h2]:font-bold [&_h2]:text-anthracite-950 [&_h2]:mt-8 [&_h3]:text-xl [&_h3]:font-bold [&_h3]:text-anthracite-950 [&_h3]:mt-6 [&_p]:text-sm sm:[&_p]:text-base [&_p]:leading-relaxed" set:html={post.content}>
+      </div>
+
+      <!-- Author Box -->
+      <div class="mt-16 p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-center gap-6">
+        <div class="w-16 h-16 rounded-full bg-gold-500/20 text-gold-700 font-bold text-xl flex items-center justify-center shrink-0 border-2 border-gold-500">
+          EY
+        </div>
+        <div class="space-y-1 text-center sm:text-left">
+          <h4 class="text-base font-bold text-anthracite-950">{post.author}</h4>
+          <p class="text-xs text-gold-600 font-semibold">{post.authorRole}</p>
+          <p class="text-xs text-slate-600 leading-relaxed pt-1">
+            İstanbul genelinde anahtar teslim mimari taahhüt, statik rölöve ve lüks konut dekorasyonu üzerine 18 yıllık şantiye tecrübesiyle projeleri yönetmektedir.
+          </p>
+        </div>
+      </div>
+
+      <!-- Share / Back Links -->
+      <div class="mt-8 pt-6 border-t border-slate-200 flex justify-between items-center text-xs">
+        <a href="/blog" class="font-bold text-anthracite-950 hover:text-gold-600 flex items-center gap-1">
+          ← Tüm Makalelere Dön
+        </a>
+        <button 
+          type="button" 
+          data-open-inspection-modal
+          class="px-4 py-2 rounded-lg bg-gold-500 text-anthracite-950 font-bold hover:brightness-110 transition-all cursor-pointer"
+        >
+          Projeniz İçin Keşif İsteyin
+        </button>
+      </div>
+
+    </div>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <CTASection />
+</Layout>
+

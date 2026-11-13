@@ -1,0 +1,85 @@
+---
+import type { ServiceItem } from "../data/services";
+
+interface Props {
+  service: ServiceItem;
+}
+
+const { service } = Astro.props;
+---
+
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-card-elevated hover:shadow-2xl hover:border-gold-500/40 transition-all duration-300 flex flex-col group">
+  <!-- Image Wrapper -->
+  <div class="relative aspect-[16/10] overflow-hidden">
+    <img 
+      src={service.heroImage} 
+      alt={service.title} 
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-anthracite-950/80 via-transparent to-transparent"></div>
+    
+    <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-anthracite-900/90 text-gold-400 text-xs font-bold tracking-wide uppercase backdrop-blur-sm border border-gold-500/30">
+      {service.badge}
+    </span>
+
+    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
+      <span class="text-xs bg-black/50 backdrop-blur-sm px-2.5 py-1 rounded-md flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        {service.estimatedDuration}
+      </span>
+      <span class="text-xs text-gold-300 font-medium">
+        {service.warranty}
+      </span>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="p-6 flex-1 flex flex-col justify-between">
+    <div>
+      <h3 class="text-xl font-bold font-serif-heading text-anthracite-950 mb-2 group-hover:text-gold-600 transition-colors">
+        <a href={`/hizmetler/${service.slug}`}>
+          {service.title}
+        </a>
+      </h3>
+
+      <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
+        {service.shortDescription}
+      </p>
+
+      <!-- Key features checklist -->
+      <ul class="space-y-2 mb-6">
+        {service.features.slice(0, 3).map((feat) => (
+          <li class="flex items-start gap-2 text-xs text-slate-700">
+            <svg class="w-4 h-4 text-gold-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>{feat}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+      <a 
+        href={`/hizmetler/${service.slug}`} 
+        class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-anthracite-950 hover:text-gold-600 group-hover:translate-x-1 transition-all"
+      >
+        <span>Hizmet Detayı & Fiyatlar</span>
+        <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+      </a>
+
+      <button 
+        type="button" 
+        data-open-inspection-modal
+        class="p-2 rounded-lg bg-gold-50 text-gold-700 hover:bg-gold-500 hover:text-white transition-colors"
+        title="Bu hizmet için ücretsiz keşif iste"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+      </button>
+    </div>
+  </div>
+</div>
+

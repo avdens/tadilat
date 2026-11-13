@@ -1,0 +1,364 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TrustBadges from "../components/TrustBadges.astro";
+import BeforeAfterSlider from "../components/BeforeAfterSlider.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ProcessSteps from "../components/ProcessSteps.astro";
+import CostCalculator from "../components/CostCalculator.astro";
+import Testimonials from "../components/Testimonials.astro";
+import CTASection from "../components/CTASection.astro";
+import { siteConfig } from "../data/siteConfig";
+import { services } from "../data/services";
+import { projects } from "../data/projects";
+import { blogPosts } from "../data/blog";
+
+const featuredProject = projects[0]; // Kadıköy project with before/after
+---
+
+<Layout 
+  title={`${siteConfig.brandName} | Anahtar Teslim Ev, Ofis ve Bina Tadilatı İstanbul`}
+  description={siteConfig.description}
+>
+  <!-- HERO SECTION -->
+  <section class="relative min-h-[90vh] flex items-center bg-anthracite-950 text-white overflow-hidden py-16 sm:py-24">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0">
+      <img 
+        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=85" 
+        alt="Lüks Ev Tadilatı" 
+        class="w-full h-full object-cover object-center filter brightness-[0.28] scale-105 animate-[shimmer_15s_infinite_alternate]" 
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-anthracite-950 via-anthracite-950/80 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-anthracite-950 via-transparent to-anthracite-950/60"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-400 text-xs font-semibold uppercase tracking-wider backdrop-blur-sm">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-gold-500"></span>
+            </span>
+            <span>İstanbul Geneli Anahtar Teslim Mimari Hizmet</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif-heading font-extrabold text-white tracking-tight leading-[1.15]">
+            Hayalinizdeki Evi <br class="hidden sm:inline" />
+            <span class="gold-gradient-text">Kusursuz İşçilik</span> ile <br class="hidden sm:inline" />
+            Yeniliyoruz.
+          </h1>
+
+          <p class="text-sm sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+            Elektrik-su tesisatından 3D mimari tasarıma, kırım-dökümden özel mobilya imalatına kadar tek elden anahtar teslim hizmet. 
+            <strong class="text-white font-semibold">Sözleşmeli sabit fiyat</strong>, <strong class="text-white font-semibold">5 yıl garanti</strong> ve gecikme cezalı teslimat taahhüdü.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <button 
+              type="button" 
+              data-open-inspection-modal
+              class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 text-anthracite-950 font-bold text-base shadow-gold-glow hover:brightness-110 active:scale-95 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <span>Ücretsiz Keşif Randevusu Al</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </button>
+
+            <a 
+              href="/fiyat-hesapla"
+              class="w-full sm:w-auto px-6 py-4 rounded-xl bg-anthracite-900/80 border border-slate-700 hover:border-gold-500 text-white font-semibold text-base hover:bg-anthracite-800 transition-all flex items-center justify-center gap-2 backdrop-blur-sm"
+            >
+              <svg class="w-5 h-5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+              <span>Maliyet Hesapla</span>
+            </a>
+          </div>
+
+          <!-- Trust bullets -->
+          <div class="pt-6 border-t border-anthracite-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+            <div>
+              <div class="text-2xl sm:text-3xl font-serif-heading font-bold text-gold-400">{siteConfig.yearsOfExperience}+ Yıl</div>
+              <div class="text-[11px] sm:text-xs text-slate-400 font-medium">Sektör Tecrübesi</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-serif-heading font-bold text-gold-400">{siteConfig.completedProjects}+</div>
+              <div class="text-[11px] sm:text-xs text-slate-400 font-medium">Tamamlanan Proje</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-serif-heading font-bold text-gold-400">%{siteConfig.customerSatisfaction}</div>
+              <div class="text-[11px] sm:text-xs text-slate-400 font-medium">Memnuniyet Oranı</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Interactive Visual Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-anthracite-900/90 border border-gold-500/30 rounded-3xl p-4 sm:p-5 shadow-2xl backdrop-blur-md">
+            
+            <div class="flex items-center justify-between mb-3 px-1">
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-wider text-gold-400">Canlı Dönüşüm Örneği</span>
+                <h3 class="text-sm font-bold text-white">Kadıköy 3+1 Daire Tadilatı</h3>
+              </div>
+              <span class="text-xs bg-gold-500/20 text-gold-400 border border-gold-500/30 px-2 py-0.5 rounded-full font-semibold">
+                38 Günde Teslim
+              </span>
+            </div>
+
+            <!-- Embedded Interactive Before/After Component -->
+            <BeforeAfterSlider 
+              beforeImage={featuredProject.beforeImage}
+              afterImage={featuredProject.afterImage}
+              beforeLabel="ÖNCESİ"
+              afterLabel="SONRASI"
+            />
+
+            <div class="mt-4 pt-3 border-t border-anthracite-800/80 flex items-center justify-between text-xs text-slate-300">
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Yerden Isıtma & Açık Mutfak
+              </span>
+              <a href="/projeler" class="text-gold-400 hover:text-gold-300 font-semibold flex items-center gap-1">
+                Tüm Projeler →
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST GUARANTEES BAR -->
+  <TrustBadges />
+
+  <!-- SERVICES OVERVIEW SECTION -->
+  <section class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold uppercase tracking-wider mb-3">
+            Uzmanlık Alanlarımız
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-anthracite-950">
+            A'dan Z'ye Anahtar Teslim Hizmetlerimiz
+          </h2>
+          <p class="text-sm text-slate-600 mt-3">
+            Tek bir taşeronla muhatap olmadan, tüm mimari, mekanik, elektrik ve dekorasyon kalemlerini tek sözleşmeyle güvenceye alın.
+          </p>
+        </div>
+
+        <a 
+          href="/hizmetler" 
+          class="inline-flex items-center gap-2 text-sm font-bold text-anthracite-950 hover:text-gold-600 transition-colors shrink-0 group"
+        >
+          <span>Tüm Hizmet Detayları</span>
+          <svg class="w-4 h-4 text-gold-500 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.slice(0, 5).map((service) => (
+          <ServiceCard service={service} />
+        ))}
+
+        <!-- Special Banner Card for 6th slot -->
+        <div class="bg-gradient-to-br from-anthracite-950 via-anthracite-900 to-anthracite-950 rounded-2xl p-8 border border-gold-500/40 text-white flex flex-col justify-between shadow-card-elevated relative overflow-hidden">
+          <div class="absolute -right-12 -top-12 w-40 h-40 bg-gold-500/10 rounded-full blur-2xl pointer-events-none"></div>
+
+          <div>
+            <span class="text-gold-400 text-xs font-bold uppercase tracking-wider block mb-2">Özel Mimari Talep</span>
+            <h3 class="text-2xl font-serif-heading font-bold mb-3">
+              Mekanınıza Özel Proje mi Gerekiyor?
+            </h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-6">
+              Restoran, klinik, mağaza veya tarihi eser renovasyonu gibi özel taahhüt projeleriniz için mimarlarımızla birebir görüşün.
+            </p>
+
+            <ul class="space-y-2 text-xs text-slate-200 mb-6">
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Statik Rölöve & Güçlendirme
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Ticari Konsept Tasarımı
+              </li>
+              <li class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Belediye & Ruhsat Takibi
+              </li>
+            </ul>
+          </div>
+
+          <button 
+            type="button" 
+            data-open-inspection-modal
+            class="w-full py-3 px-4 rounded-xl bg-gold-500 text-anthracite-950 font-bold text-xs uppercase tracking-wider hover:brightness-110 active:scale-95 transition-all text-center cursor-pointer shadow-gold-glow"
+          >
+            Özel Proje Danışmanlığı Al
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROCESS ROADMAP (HOW WE WORK) -->
+  <section class="py-24 bg-slate-50 border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ProcessSteps />
+    </div>
+  </section>
+
+  <!-- INTERACTIVE COST CALCULATOR SECTION -->
+  <section class="py-24 bg-anthracite-950 relative overflow-hidden" id="hesapla">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <CostCalculator />
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS SHOWCASE -->
+  <section class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold uppercase tracking-wider mb-3">
+            Referanslarımız
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-anthracite-950">
+            Tamamlanan Son Projelerimiz
+          </h2>
+          <p class="text-sm text-slate-600 mt-3">
+            İstanbul'un seçkin semtlerinde anahtar teslim tamamladığımız daire, villa ve kurumsal ofis dönüşümleri.
+          </p>
+        </div>
+
+        <a 
+          href="/projeler" 
+          class="inline-flex items-center gap-2 text-sm font-bold text-anthracite-950 hover:text-gold-600 transition-colors shrink-0 group"
+        >
+          <span>Tüm Projeler & Öncesi/Sonrası</span>
+          <svg class="w-4 h-4 text-gold-500 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.slice(0, 3).map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+
+      <div class="text-center mt-12">
+        <a 
+          href="/projeler" 
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-anthracite-800 bg-anthracite-950 text-white font-semibold text-sm hover:border-gold-500 hover:text-gold-400 transition-all shadow-md"
+        >
+          <span>Daha Fazla Proje İncele (Öncesi / Sonrası Karşılaştırmalı)</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <Testimonials />
+
+  <!-- BLOG / TADİLAT REHBERİ HIGHLIGHTS -->
+  <section class="py-24 bg-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-600 text-xs font-semibold uppercase tracking-wider mb-3">
+            Tadilat & Mimarlık Rehberi
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-serif-heading font-bold text-anthracite-950">
+            Tadilat Öncesi Bilmeniz Gerekenler
+          </h2>
+          <p class="text-sm text-slate-600 mt-3">
+            Bütçenizi doğru yönetmeniz, malzeme seçimini doğru yapmanız ve tuzaklara düşmemeniz için uzman mimarlarımızın kaleme aldığı rehberler.
+          </p>
+        </div>
+
+        <a 
+          href="/blog" 
+          class="inline-flex items-center gap-2 text-sm font-bold text-anthracite-950 hover:text-gold-600 transition-colors shrink-0 group"
+        >
+          <span>Tüm Makaleler</span>
+          <svg class="w-4 h-4 text-gold-500 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {blogPosts.map((post) => (
+          <article class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-card-elevated hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img 
+                src={post.image} 
+                alt={post.title} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                loading="lazy"
+              />
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-anthracite-900/90 text-gold-400 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+                {post.category}
+              </span>
+            </div>
+            
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 text-xs text-slate-400 mb-2">
+                  <span>{post.date}</span>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
+
+                <h3 class="text-lg font-bold font-serif-heading text-anthracite-950 mb-2 group-hover:text-gold-600 transition-colors">
+                  <a href={`/blog/${post.slug}`}>
+                    {post.title}
+                  </a>
+                </h3>
+
+                <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
+                  {post.excerpt}
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">{post.author}</span>
+                <a href={`/blog/${post.slug}`} class="text-gold-600 font-bold hover:underline">
+                  Okumaya Devam Et →
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HIGH CONVERTING CTA BANNER -->
+  <CTASection />
+
+</Layout>

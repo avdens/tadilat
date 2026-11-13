@@ -1,0 +1,186 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import ProcessSteps from "../components/ProcessSteps.astro";
+import CTASection from "../components/CTASection.astro";
+import { siteConfig } from "../data/siteConfig";
+
+const detailedSteps = [
+  {
+    step: "01",
+    title: "Ücretsiz Yerinde Keşif & Lazer Ölçümlendirme",
+    badge: "24 Saat İçinde",
+    desc: "Mekanınızı mimarlarımız ve şantiye şefimizle bizzat ziyaret ediyoruz. Lazer metrelerle milimetrik rölöve çıkarıyor, taşıyıcı kolon/kiriş statik durumunu, elektrik panosunu ve temiz/pis su hatlarını inceliyoruz. Sizin yaşam alışkanlıklarınızı ve hayallerinizi dinliyoruz.",
+    deliverables: ["Lazer Rölöve Planı", "Altyapı Risk Raporu", "İhtiyaç Analiz Formu"]
+  },
+  {
+    step: "02",
+    title: "Foto-Gerçekçi 3D Tasarım & Malzeme Seçimi",
+    badge: "Sanal Tur Desteği",
+    desc: "Evinizin tadilat bittiğinde nasıl görüneceğini henüz kırıma başlamadan önce foto-gerçekçi 3D render görselleriyle hazırlıyoruz. Mimarlarımız eşliğinde seramik, tezgah, parke, batarya ve lake kapak renklerini showroom'umuzda birebir dokunarak seçiyorsunuz.",
+    deliverables: ["3D Render Görselleri", "Aydınlatma & Tesisat Planı", "Detaylı Malzeme Moodboard'u"]
+  },
+  {
+    step: "03",
+    title: "Noter Onaylı Sabit Fiyat Sözleşmesi & Cezai Şart",
+    badge: "Sürpriz Maliyete Son",
+    desc: "Sözleşmemizde kullanılacak tüm markalar (Jotun, VitrA, Grohe, Rehau vb.) ve işin teslim tarihi gün bazında netleştirilir. 'Burası da çürük çıktı' gibi gerekçelerle ekstra masraf çıkarılmaz. Olası gecikmeler için günlük cezai tazminat resmi sözleşmemizde yer alır.",
+    deliverables: ["Noter Onaylı Sözleşme", "Gün Bazlı İş Programı", "Sabit Fiyat Taahhütnamesi"]
+  },
+  {
+    step: "04",
+    title: "Mimar Denetimli Uygulama & Günlük WhatsApp Raporu",
+    badge: "Şantiye Şefi Kontrolü",
+    desc: "Siz işinizin başındayken veya tatildeyken, mimarlarımız ve şantiye şefimiz her gün uygulamayı denetler. Kırım, tesisat basınç testi, su yalıtımı, alçı, seramik ve mobilya montajı aşamaları günlük fotoğraflı ve videolu WhatsApp brifingleriyle bilginize sunulur.",
+    deliverables: ["Günlük Fotoğraf / Video Raporu", "Su İzolasyon Test Onayı", "Basınç Test Sertifikası"]
+  },
+  {
+    step: "05",
+    title: "Endüstriyel Temizlik & 5 Yıl Garanti ile Teslim",
+    badge: "Hemen Yaşamaya Hazır",
+    desc: "Şantiye molozu ve inşaat tozları profesyonel endüstriyel temizlik ekiplerimiz tarafından temizlenir. Mekanınız pırıl pırıl, taşınmaya hazır vaziyette teslim edilir. Size özel hazırlanan 5 Yıl İşçilik Garanti Sertifikası ve Tesisat Bakım Rehberi takdim edilir.",
+    deliverables: ["5 Yıl Firma Garanti Belgesi", "Tesisat & Elektrik Şeması", "Temiz & Taşınmaya Hazır Mekan"]
+  }
+];
+---
+
+<Layout 
+  title={`Nasıl Çalışırız? | 5 Adımda Kusursuz Tadilat Süreci | ${siteConfig.brandName}`}
+  description="Anahtar teslim tadilatta 5 adımlı şeffaf çalışma modelimiz: Keşif, 3D tasarım, sabit fiyat sözleşmesi, mimar denetimi ve 5 yıl garantiyle teslimat."
+>
+  <Breadcrumb items={[{ label: "Nasıl Çalışırız? (Süreç)" }]} />
+
+  <!-- Hero Header -->
+  <section class="bg-anthracite-950 text-white py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          Şeffaf & Garantili Çalışma Modeli
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-serif-heading font-extrabold text-white tracking-tight mb-4">
+          Tadilat Sürecini <br />
+          <span class="gold-gradient-text">Nasıl Yönetiyoruz?</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          Usta aramaya, birbirini suçlayan taşeronlarla tartışmaya veya gün aşırı artan maliyetlere son. İlk günden anahtar teslimine kadar her adımı kayıtlı ve planlı yönetiyoruz.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Step-by-Step Breakdown -->
+  <section class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      {detailedSteps.map((step, index) => (
+        <div class="flex flex-col md:flex-row gap-6 sm:gap-8 items-start p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-slate-50 border border-slate-200/80 shadow-card-elevated hover:border-gold-500/50 transition-all duration-300">
+          
+          <!-- Step Badge -->
+          <div class="w-16 h-16 rounded-2xl bg-anthracite-950 text-gold-400 font-serif-heading font-bold text-2xl flex items-center justify-center shrink-0 border-2 border-gold-500 shadow-md">
+            {step.step}
+          </div>
+
+          <!-- Body -->
+          <div class="flex-1 space-y-3">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="text-xs uppercase font-bold tracking-wider px-3 py-1 rounded-full bg-gold-500/10 text-gold-700 border border-gold-500/20">
+                {step.badge}
+              </span>
+              <span class="text-xs text-slate-400 font-medium">Adım {index + 1} / 5</span>
+            </div>
+
+            <h3 class="text-2xl font-serif-heading font-bold text-anthracite-950">
+              {step.title}
+            </h3>
+
+            <p class="text-sm text-slate-600 leading-relaxed">
+              {step.desc}
+            </p>
+
+            <!-- Deliverables -->
+            <div class="pt-4 border-t border-slate-200">
+              <span class="text-xs font-bold text-anthracite-950 block mb-2">Bu Aşamada Size Teslim Edilenler:</span>
+              <div class="flex flex-wrap gap-2">
+                {step.deliverables.map((item) => (
+                  <span class="text-xs px-3 py-1 bg-white border border-slate-200 rounded-lg text-slate-700 font-medium flex items-center gap-1.5">
+                    <svg class="w-3.5 h-3.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      ))}
+
+    </div>
+  </section>
+
+  <!-- Contract & Guarantees Highlight -->
+  <section class="py-20 bg-anthracite-950 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6">
+          <span class="text-xs uppercase tracking-wider text-gold-400 font-bold block">
+            Hukuki & Resmi Güvence
+          </span>
+          <h2 class="text-3xl font-serif-heading font-bold text-white">
+            Sözleşmemizde Hangi Taahhütler Yer Alır?
+          </h2>
+          <p class="text-sm text-slate-300 leading-relaxed font-light">
+            Sözlü vaatler şantiyede çabuk unutulur. Bu nedenle yaptığımız her işi noter onaylı standart kurumsal sözleşmemizle kayıt altına alıyoruz.
+          </p>
+
+          <ul class="space-y-3.5 text-xs text-slate-300">
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <span><strong>Sabit Fiyat Maddesi:</strong> İmzalanan keşif özeti ve malzeme listesi haricinde tek bir kuruş ek talep edilemez.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <span><strong>Cezai Şart Maddesi:</strong> Teslim tarihinde yaşanabilecek her gecikme günü için belirlenen günlük tazminat tutarı tarafınıza ödenir.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <span><strong>5 Yıl İşçilik Garantisi:</strong> Sıhhi tesisat sızıntısı, boya kabarması, elektrik hattı vb. sorunlarda 24 saatte müdahale garantisi.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
+              <span><strong>Şantiye Risk Sigortası:</strong> Komşu dairelere veya binaya gelebilecek olası zararlara karşı 3. şahıs mali mesuliyet sigortası.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-anthracite-900 border border-gold-500/30 rounded-3xl p-8 shadow-2xl space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 text-2xl font-bold">
+              📜
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-white">Örnek Sözleşme ve Şartname</h4>
+              <p class="text-xs text-slate-400">Keşif randevusu öncesi sözleşme taslağımızı inceleyebilirsiniz.</p>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Şeffaflık ilkemiz gereği, çalışmaya başlamadan önce sözleşme maddelerimizi ve malzeme şartnamemizi hiçbir gizlilik olmadan sizlerle paylaşıyoruz.
+          </p>
+
+          <button 
+            type="button" 
+            data-open-inspection-modal
+            class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 text-anthracite-950 font-bold text-xs uppercase tracking-wider shadow-gold-glow hover:brightness-110 active:scale-95 transition-all cursor-pointer"
+          >
+            Sözleşme & Ücretsiz Keşif Randevusu İste
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</Layout>
+

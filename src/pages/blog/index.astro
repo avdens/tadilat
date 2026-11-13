@@ -1,0 +1,85 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import CTASection from "../../components/CTASection.astro";
+import { siteConfig } from "../../data/siteConfig";
+import { blogPosts } from "../../data/blog";
+---
+
+<Layout 
+  title={`Tadilat & İç Mimarlık Rehberi | Blog | ${siteConfig.brandName}`}
+  description="Ev tadilatı maliyetleri, açık mutfak tasarımları, banyo izolasyonu ve anahtar teslim renovasyon tüyoları. Uzman mimarlarımızın hazırladığı kapsamlı rehberler."
+>
+  <Breadcrumb items={[{ label: "Blog & Tadilat Rehberi" }]} />
+
+  <!-- Hero Header -->
+  <section class="bg-anthracite-950 text-white py-16 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          Mimari Bilgi Bankası
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-serif-heading font-extrabold text-white tracking-tight mb-4">
+          Tadilat & Mimarlık <br />
+          <span class="gold-gradient-text">Uzman Rehberi</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          Tadilata başlamadan önce maliyetleri planlamanız, malzeme kalitesini seçmeniz ve hatalardan kaçınmanız için hazırladığımız güncel makaleler.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog List -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {blogPosts.map((post) => (
+          <article class="bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-card-elevated hover:shadow-xl transition-all duration-300 flex flex-col group">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <img 
+                src={post.image} 
+                alt={post.title} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                loading="lazy"
+              />
+              <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-anthracite-900/90 text-gold-400 text-xs font-bold uppercase tracking-wider backdrop-blur-sm">
+                {post.category}
+              </span>
+            </div>
+            
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center gap-3 text-xs text-slate-400 mb-2">
+                  <span>{post.date}</span>
+                  <span>•</span>
+                  <span>{post.readTime}</span>
+                </div>
+
+                <h2 class="text-lg font-bold font-serif-heading text-anthracite-950 mb-2 group-hover:text-gold-600 transition-colors">
+                  <a href={`/blog/${post.slug}`}>
+                    {post.title}
+                  </a>
+                </h2>
+
+                <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed mb-4">
+                  {post.excerpt}
+                </p>
+              </div>
+
+              <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-xs">
+                <span class="text-slate-500 font-medium">{post.author}</span>
+                <a href={`/blog/${post.slug}`} class="text-gold-600 font-bold hover:underline">
+                  Yazıyı Oku →
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</Layout>
+

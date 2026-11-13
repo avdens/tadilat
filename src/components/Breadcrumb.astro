@@ -1,0 +1,63 @@
+---
+interface Props {
+  items: Array<{ label: string; href?: string }>;
+}
+
+const { items } = Astro.props;
+
+const schemaItems = [
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Ana Sayfa",
+    "item": "https://artimimarlik.com.tr/"
+  },
+  ...items.map((item, index) => ({
+    "@type": "ListItem",
+    "position": index + 2,
+    "name": item.label,
+    ...(item.href ? { "item": `https://artimimarlik.com.tr${item.href}` } : {})
+  }))
+];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": schemaItems
+};
+---
+
+<nav aria-label="Breadcrumb" class="py-4 border-b border-slate-200/80 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <ol class="flex items-center space-x-2 text-xs text-slate-500">
+      <li>
+        <a href="/" class="hover:text-gold-600 transition-colors flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          Ana Sayfa
+        </a>
+      </li>
+
+      {items.map((item, index) => (
+        <li class="flex items-center space-x-2">
+          <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+          {item.href && index < items.length - 1 ? (
+            <a href={item.href} class="hover:text-gold-600 transition-colors">
+              {item.label}
+            </a>
+          ) : (
+            <span class="text-anthracite-950 font-semibold truncate max-w-xs sm:max-w-md">
+              {item.label}
+            </span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+

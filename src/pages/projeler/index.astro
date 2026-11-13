@@ -1,0 +1,195 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Breadcrumb from "../../components/Breadcrumb.astro";
+import BeforeAfterSlider from "../../components/BeforeAfterSlider.astro";
+import CTASection from "../../components/CTASection.astro";
+import { siteConfig } from "../../data/siteConfig";
+import { projects } from "../../data/projects";
+
+const categories = [
+  { id: "all", label: "Tüm Projeler" },
+  { id: "ev", label: "Ev & Daire" },
+  { id: "villa", label: "Lüks Villa" },
+  { id: "ofis", label: "Ofis & Ticari" },
+  { id: "mutfak-banyo", label: "Mutfak & Banyo" },
+  { id: "bina", label: "Bina Dış Cephe" },
+];
+---
+
+<Layout 
+  title={`Projelerimiz & Öncesi / Sonrası Galerisi | ${siteConfig.brandName}`}
+  description="Kadıköy, Sarıyer, Levent ve Beşiktaş'ta tamamladığımız anahtar teslim daire, villa ve ofis tadilatı projeleri. Öncesi ve sonrası canlı karşılaştırması."
+>
+  <Breadcrumb items={[{ label: "Projelerimiz & Portfolyo" }]} />
+
+  <!-- Hero Header -->
+  <section class="bg-anthracite-950 text-white py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="max-w-3xl">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">
+          Mimari Referanslarımız
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-serif-heading font-extrabold text-white tracking-tight mb-4">
+          Dönüşüm Hikayeleri: <br />
+          <span class="gold-gradient-text">Öncesi & Sonrası</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-light">
+          Eski ve yıpranmış mekanların çağdaş, konforlu ve estetik yaşam alanlarına nasıl dönüştüğünü interaktif kaydırıcı ile keşfedin.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Project Grid -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-16" id="project-filter-tabs">
+        {categories.map((cat, idx) => (
+          <button
+            type="button"
+            data-filter={cat.id}
+            class={`filter-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
+              idx === 0
+                ? "bg-anthracite-950 text-gold-400 border border-gold-500 shadow-md active-tab"
+                : "bg-white text-slate-700 border border-slate-200 hover:border-gold-500 hover:text-gold-600"
+            }`}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Projects List with Before/After Slider for Each -->
+      <div class="space-y-16" id="projects-container">
+        {projects.map((project) => (
+          <div 
+            id={project.id}
+            data-category={project.category}
+            class="project-card bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 border border-slate-200/80 shadow-card-elevated hover:shadow-2xl transition-all duration-300"
+          >
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              
+              <!-- Left: Interactive Before / After Slider (7 cols) -->
+              <div class="lg:col-span-7">
+                <BeforeAfterSlider 
+                  beforeImage={project.beforeImage}
+                  afterImage={project.afterImage}
+                  beforeLabel="ÖNCESİ"
+                  afterLabel="SONRASI"
+                />
+              </div>
+
+              <!-- Right: Project Specs & Scope (5 cols) -->
+              <div class="lg:col-span-5 space-y-4">
+                
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-3 py-1 rounded-full bg-gold-500/10 text-gold-700 border border-gold-500/20 text-xs font-bold uppercase tracking-wider">
+                    {project.categoryLabel}
+                  </span>
+                  <span class="text-xs text-slate-400 font-medium">Tamamlanma: {project.year}</span>
+                </div>
+
+                <h3 class="text-2xl font-serif-heading font-bold text-anthracite-950">
+                  {project.title}
+                </h3>
+
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {project.description}
+                </p>
+
+                <!-- Specs Grid -->
+                <div class="grid grid-cols-2 gap-3 py-3 border-y border-slate-100 text-xs">
+                  <div>
+                    <span class="text-slate-400 block text-[11px]">Konum:</span>
+                    <strong class="text-anthracite-950 font-semibold">{project.location}</strong>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block text-[11px]">Metrekare:</span>
+                    <strong class="text-anthracite-950 font-semibold">{project.area}</strong>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block text-[11px]">Teslim Süresi:</span>
+                    <strong class="text-gold-600 font-semibold">{project.duration}</strong>
+                  </div>
+                  <div>
+                    <span class="text-slate-400 block text-[11px]">Garanti:</span>
+                    <strong class="text-emerald-600 font-semibold">5 Yıl Resmi Garanti</strong>
+                  </div>
+                </div>
+
+                <!-- Highlights -->
+                <div>
+                  <span class="text-xs font-bold text-anthracite-950 block mb-2">Öne Çıkan Uygulamalar:</span>
+                  <div class="flex flex-wrap gap-1.5">
+                    {project.highlights.map((h) => (
+                      <span class="text-xs px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 font-medium">
+                        ✓ {h}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <!-- Testimonial Quote if present -->
+                {project.testimonial && (
+                  <div class="p-3.5 rounded-xl bg-gold-50/60 border border-gold-200/60 text-xs italic text-slate-700">
+                    "{project.testimonial.text}"
+                    <span class="block not-italic font-bold text-anthracite-950 text-[11px] mt-1">
+                      — {project.testimonial.author} ({project.testimonial.role})
+                    </span>
+                  </div>
+                )}
+
+                <div class="pt-2">
+                  <button 
+                    type="button" 
+                    data-open-inspection-modal
+                    class="w-full py-3 px-4 rounded-xl bg-anthracite-950 text-gold-400 border border-gold-500/40 hover:bg-gold-500 hover:text-anthracite-950 font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md text-center"
+                  >
+                    Benzer Bir Proje İçin Keşif İste
+                  </button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const filter = tab.getAttribute('data-filter');
+
+        // Update active tab styles
+        filterTabs.forEach((t) => {
+          t.classList.remove('bg-anthracite-950', 'text-gold-400', 'border-gold-500', 'shadow-md');
+          t.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
+        });
+        tab.classList.add('bg-anthracite-950', 'text-gold-400', 'border-gold-500', 'shadow-md');
+        tab.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
+
+        // Filter cards
+        projectCards.forEach((card) => {
+          const cat = card.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
+            (card as HTMLElement).style.display = 'block';
+          } else {
+            (card as HTMLElement).style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+  <CTASection />
+</Layout>
+

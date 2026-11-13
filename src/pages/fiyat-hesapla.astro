@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Breadcrumb from "../components/Breadcrumb.astro";
+import CostCalculator from "../components/CostCalculator.astro";
+import CTASection from "../components/CTASection.astro";
+import { siteConfig } from "../data/siteConfig";
+
+const budgetBreakdown = [
+  { label: "Mutfak & Banyo İmalatı", percent: 35, desc: "Dolaplar, tezgah, bataryalar, seramikler ve duş sistemleri" },
+  { label: "Altyapı (Elektrik & Su)", percent: 25, desc: "Kablolama, panolar, PPRC sessiz boru ve kalorifer hatları" },
+  { label: "Zemin & Duvar Kaplamaları", percent: 20, desc: "Parke, süpürgelik, saten alçı ve 3 kat Jotun boya" },
+  { label: "Kapılar, Tavan & Detaylar", percent: 20, desc: "Lake iç kapılar, çelik kapı, asma tavan ve gizli LED aydınlatma" },
+];
+---
+
+<Layout 
+  title={`Tadilat Fiyatı Hesapla | 2025 Güncel Maliyet Sihirbazı | ${siteConfig.brandName}`}
+  description="Daire, villa veya ofisinizin metrekare ve malzeme tercihlerine göre anında anahtar teslim maliyetini hesaplayın. Sözleşmeli sabit fiyat garantisi."
+>
+  <Breadcrumb items={[{ label: "Fiyat & Maliyet Hesapla" }]} />
+
+  <!-- Hero Header -->
+  <section class="bg-anthracite-950 text-white py-16 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        ✨ 2025 Güncel Fiyat Sihirbazı
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-serif-heading font-extrabold text-white tracking-tight mb-4">
+        Tadilat Bütçenizi <br />
+        <span class="gold-gradient-text">1 Dakikada Hesaplayın</span>
+      </h1>
+      <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed font-light">
+        Sürpriz maliyet ve belirsizlik yok. Metrekaresi ve paket özelliklerine göre anında tahmini bütçe aralığını öğrenin.
+      </p>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Component -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <CostCalculator />
+    </div>
+  </section>
+
+  <!-- Budget Breakdown Educational Section -->
+  <section class="py-20 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-wider text-gold-600 font-bold block mb-2">Bütçe Nereye Harcanır?</span>
+        <h2 class="text-3xl font-serif-heading font-bold text-anthracite-950">
+          Tipik Bir Ev Tadilatının Maliyet Dağılımı
+        </h2>
+        <p class="text-sm text-slate-600 mt-2">
+          Komple bir daire renovasyonunda bütçenin kalemlere göre yaklaşık payı şu şekildedir:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {budgetBreakdown.map((item) => (
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="text-3xl font-bold font-serif-heading text-gold-600 mb-2">
+                %{item.percent}
+              </div>
+              <h3 class="text-base font-bold text-anthracite-950 mb-2">
+                {item.label}
+              </h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+            <div class="w-full bg-slate-200 h-1.5 rounded-full mt-6 overflow-hidden">
+              <div class="bg-gold-500 h-full rounded-full" style={`width: ${item.percent}%`}></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Fixed Price Promise Banner -->
+  <section class="py-16 bg-anthracite-950 text-white border-t border-anthracite-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="w-16 h-16 rounded-2xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-3xl mx-auto">
+        🛡️
+      </div>
+      <h3 class="text-2xl sm:text-3xl font-serif-heading font-bold">
+        Neden "Sabit Fiyat Garantisi" Veriyoruz?
+      </h3>
+      <p class="text-sm text-slate-300 leading-relaxed font-light">
+        Sektördeki en büyük şikayet, iş başladıktan sonra 'burası da kırılmalı, şu kablo da değişmeli' denilerek başlangıç bütçesinin 2 katına çıkmasıdır. 
+        Biz, keşif aşamasında lazer ve termal kameralarla tüm riskleri önceden tespit eder, sözleşmeye yazarız ve asla ek bütçe talep etmeyiz.
+      </p>
+      <div class="pt-2">
+        <button 
+          type="button" 
+          data-open-inspection-modal
+          class="px-8 py-3.5 rounded-xl bg-gold-500 text-anthracite-950 font-bold text-sm uppercase tracking-wider shadow-gold-glow hover:brightness-110 active:scale-95 transition-all cursor-pointer"
+        >
+          Sözleşmeli Ücretsiz Keşif İste
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <CTASection />
+</Layout>
+
